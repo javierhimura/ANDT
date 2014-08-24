@@ -11,8 +11,8 @@ This tool need .Net Framework 4.
 
 My Goal for this tool is :
 
-1. User friendly on interface and functionality (i not care about newbie/noob user), not 
-   run on any platform.
+1. User friendly on interface and functionality (i not care about newbie/noob user), this
+   not mean can running on any platform (or cross-platform).
 
 2. Multi-Document on one Application/Window (MDI), on java is possible btw is not on my
    main priority.
