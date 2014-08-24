@@ -1,0 +1,384 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "BLZCoder.cs",
+			"settings":
+			{
+				"buffer_size": 18156,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: $… = ( … ) ? … : …"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/dokumen/_Percobaan/NinfiaDSToolkit/NinfiaDSToolkit/Andi/Utils/Narc/BLZCoder.cs",
+		"/L/ccs.cs",
+		"/E/dokumen/_tugas/TugasSOFirefly/TugasSOFirefly/FormV/Main2.cs",
+		"/E/dokumen/_tugas/TugasSOFirefly/TugasSOFirefly/Library/FireflyVariabel.cs",
+		"/E/dokumen/pa/Sublime Text Build 3059 x64/Data/Packages/User/SublimeHighlight.sublime-settings",
+		"/C/xampp/htdocs/TugasRTI - Copy/chart.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/proses.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/smartphone.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/upload.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/daftar_transaksi.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/daftar_transaksi_p.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/function.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/index.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/pembeli.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/pembeli_p.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/page_login.php",
+		"/C/xampp/htdocs/TugasRTI - Copy/pwlgrafik.sql",
+		"/C/xampp/htdocs/SIA/application/controllers/4041.php",
+		"/C/xampp/htdocs/SIA/application/errors/error4041.php",
+		"/C/xampp/htdocs/SIA/application/config/routes.php",
+		"/C/xampp/htdocs/SIA/application/errors/error_404.php",
+		"/C/xampp/htdocs/SIA/application/controllers/e4041.php",
+		"/C/xampp/htdocs/SIA/.htaccess",
+		"/K/Data/Kuliah/Semester 5/5 RPL/rpl 1/rpl1/index.php",
+		"/C/xampp/htdocs/SIA/application/views/login1.php",
+		"/C/xampp/htdocs/SIA/application/controllers/login.php",
+		"/C/xampp/htdocs/SIA/application/views/dashboard.php",
+		"/K/Data/Kuliah/Lain lain/kuliah/htdocs/vanilla/.htaccess",
+		"/K/Data/Kuliah/Semester 5/5 RPL/rpl 1/rpl1/dashboard.php",
+		"/C/xampp/htdocs/SIA/application/config/database.php",
+		"/C/xampp/htdocs/SIA/application/controllers/dashboard.php",
+		"/C/Downloaded Web Sites/www.keenthemes.com/preview/metronic_admin/assets/plugins/font-awesome/css/font-awesome.min.css",
+		"/L/Compressed/index.html",
+		"/C/Downloaded Web Sites/themes.suggelab.com/sprflat/assets/css/main.min.css",
+		"/C/Downloaded Web Sites/themes.suggelab.com/sprflat/index.html",
+		"/E/download/BigInteger/BigInteger.cs",
+		"/E/download/BigInteger/BigInteger3.cs",
+		"/E/download/BigInteger/BigInteger2.cs",
+		"/G/datasoal.txt",
+		"/I/kuliah/Semester 6/Sistem Optimisasi/FireFly Algorithm/materi/firefly_algorithm/firefly_simple.m",
+		"/E/download/firefly-gh-pages/firefly-gh-pages/js/firefly.js",
+		"/G/a.php",
+		"/C/Users/hunnybee/Desktop/a.php",
+		"/C/xampp/htdocs/pbo/index2.php",
+		"/C/xampp/htdocs/pbo/index.php",
+		"/C/xampp/htdocs/pbotest/index3.php",
+		"/H/_Backup/data_1/kuliah/htdocs/_back/rpl1/dmhs.php",
+		"/H/_Backup/data_1/kuliah/htdocs/d/a_update.php",
+		"/H/_Backup/data_1/kuliah/htdocs/d/a_delete.php",
+		"/G/ppbo4/index2.php",
+		"/C/xampp/htdocs/pbotest/index2.php",
+		"/C/xampp/htdocs/pbotest/index.php",
+		"/G/_App/dir/Sublime Text Build 3059 x64/Data/Packages/User/SublimeHighlight.sublime-settings",
+		"/G/pbo/index.php",
+		"/G/pkg 5/s/soal1a.m",
+		"/G/pkg 5/s/un1.m",
+		"/G/pkg 5/s/un1.fig",
+		"/G/_App/dir/Sublime Text Build 3059 x64/Data/Packages/InsertDate/README.md",
+		"/G/_App/dir/Sublime Text Build 3059 x64/Data/Packages/User/Default.sublime-keymap",
+		"/G/_App/dir/Sublime Text Build 3059 x64/Data/Packages/Package Control.sublime-package",
+		"/G/_App/dir/Sublime Text Build 3059 x64/Data/Packages/User/Preferences.sublime-settings",
+		"/G/ppbo4/index.php",
+		"/G/pkg 5/draw_lingkaran.m",
+		"/G/pkg 5/draw_garis.m",
+		"/G/pkg 5/draw_busur.m",
+		"/G/Backup/PC 1/htdocs/rpl2/admin/k_uang.php",
+		"/C/xampp/htdocs/test1/index.php",
+		"/I/bw2.txt",
+		"/E/dokumen/libs/New folder (2)/a/test1/Cyotek/Windows/Forms/ToolTip.cs",
+		"/C/xampp/htdocs/ci/application/controllers/coba_client.php",
+		"/C/xampp/htdocs/ci/application/config/autoload.php",
+		"/C/xampp/htdocs/ci/application/config/routes.php",
+		"/C/xampp/htdocs/ci/application/controllers/restclient.php",
+		"/C/xampp/htdocs/ci/application/libraries/Rest.php",
+		"/C/xampp/htdocs/ci/application/config/config.php",
+		"/C/xampp/htdocs/ci/application/controllers/coba.php",
+		"/C/xampp/htdocs/tugas_pwl/application/models/m_peserta.php",
+		"/C/xampp/htdocs/tugas_pwl/application/controllers/c_peserta.php",
+		"/C/xampp/htdocs/ci/application/config/database.php",
+		"/C/xampp/htdocs/ci/application/models/m_matkul.php",
+		"/C/xampp/htdocs/weblanjut/cobaconnectclient.php",
+		"/C/xampp/htdocs/weblanjut/productlistclient.php",
+		"/C/xampp/htdocs/contoh_pwl/application/controllers/server_ws.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"    ",
+			"E3",
+			"E2",
+			".mp3",
+			"\\assets",
+			"..\\assets",
+			" (1)",
+			"steadysets",
+			"zoom.js",
+			"Label2",
+			"	",
+			"init_ffa",
+			"instr",
+			"init_ffa",
+			"sort",
+			"init_ffa",
+			"range",
+			"init_ffa",
+			"inputnewmhsdata",
+			" ",
+			"\"",
+			"            ",
+			"nips",
+			"saveeditan",
+			"namas",
+			",",
+			"class90",
+			"K:\\Pokemon\\Game\\Pokemon Games\\hash\\Pokemon Platinum\\Pokemon Platinum (",
+			"Pokemon White 2 (",
+			".nds",
+			"Pokemon Black 2 ",
+			",",
+			" ",
+			"\\xfffe",
+			"CI_Loader",
+			"selectdata"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"E6",
+			"D6",
+			"",
+			"assets",
+			"\\assets",
+			"",
+			"Label1",
+			",",
+			"return ",
+			"\"",
+			"",
+			"\",\"",
+			"",
+			"\n",
+			",",
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "BLZCoder.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8398,
+								8403
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"WordCountShouldRun": true,
+							"bh_regions":
+							[
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close"
+							],
+							"syntax": "Packages/C#/C#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3274.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "BLZCoder.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

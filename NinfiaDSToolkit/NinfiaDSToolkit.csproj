@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9200ED3-C018-4F88-B387-3732A58A02BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NinfiaDSToolkit</RootNamespace>
+    <AssemblyName>NinfiaDSToolkit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SevenZipLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\_\tugas\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\SevenZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceGrid">
+      <HintPath>..\..\..\..\build\SourceGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\build\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\..\..\..\build\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Andi\Controls\AContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\AndiGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\AndiImageComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\AndiListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\AStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\ControlExtensions.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\AutocompleteItem.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\AutocompleteMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\Bookmarks.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\Char.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\CommandManager.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\Commands.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\DocumentMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\EncodingDetector.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\ExportToHTML.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\ExportToRTF.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\FastColoredTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\FileTextSource.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\FindForm.Designer.cs">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\GoToForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\GoToForm.Designer.cs">
+      <DependentUpon>GoToForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\Hints.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\Hotkeys.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\HotkeysEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\HotkeysEditorForm.Designer.cs">
+      <DependentUpon>HotkeysEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\LimitedStack.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\Line.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\LinesAccessor.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\MacrosManager.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\Place.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\PlatformType.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\Range.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\ReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\ReplaceForm.Designer.cs">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\Ruler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\Ruler.Designer.cs">
+      <DependentUpon>Ruler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\Style.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\SyntaxDescriptor.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\SyntaxHighlighter.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\TextSource.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\TypeDescriptor.cs" />
+    <Compile Include="Andi\Controls\FastColoredTextBox\UnfocusablePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\FastColoredTextBox\VisualMarker.cs" />
+    <Compile Include="Andi\Controls\ListBoxTabs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\ListBoxTabs.designer.cs">
+      <DependentUpon>ListBoxTabs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Utils\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\Utils\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Utils\Narc\AndiNarcReader.cs" />
+    <Compile Include="Andi\Utils\Narc\BLZCoder.cs" />
+    <Compile Include="Andi\Controls\EnumExtensions.cs" />
+    <Compile Include="Andi\Controls\HexBox\BuiltInContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\HexBox\ByteCharConverters.cs" />
+    <Compile Include="Andi\Controls\HexBox\ByteCollection.cs" />
+    <Compile Include="Andi\Controls\HexBox\BytePositionInfo.cs" />
+    <Compile Include="Andi\Controls\HexBox\DataBlock.cs" />
+    <Compile Include="Andi\Controls\HexBox\DataMap.cs" />
+    <Compile Include="Andi\Controls\HexBox\DynamicByteProvider.cs" />
+    <Compile Include="Andi\Controls\HexBox\DynamicFileByteProvider.cs" />
+    <Compile Include="Andi\Controls\HexBox\FileByteProvider.cs" />
+    <Compile Include="Andi\Controls\HexBox\FileDataBlock.cs" />
+    <Compile Include="Andi\Controls\HexBox\FindOptions.cs" />
+    <Compile Include="Andi\Controls\HexBox\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\HexBox\HexCasing.cs" />
+    <Compile Include="Andi\Controls\HexBox\IByteProvider.cs" />
+    <Compile Include="Andi\Controls\HexBox\MemoryDataBlock.cs" />
+    <Compile Include="Andi\Controls\HexBox\NativeMethods.cs" />
+    <Compile Include="Andi\Controls\HexBox\Util.cs" />
+    <Compile Include="Andi\Controls\IListControl.cs" />
+    <Compile Include="Andi\Controls\IListControlRenderer.cs" />
+    <Compile Include="Andi\Controls\ImageBox\AndiImageBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxActionSources.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxBorderStyle.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxCancelEventArgs.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxDesigner.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxGridDisplayMode.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxGridScale.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxNativeMethods.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxSelectionMode.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxSizeMode.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxZoomActions.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ImageBoxZoomEventArgs.cs" />
+    <Compile Include="Andi\Controls\ImageBox\ScrollControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\ImageBox\ScrollProperties.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\ImageBox\VirtualScrollableControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\ImageBox\ZoomLevelCollection.cs" />
+    <Compile Include="Andi\Controls\ImageComboItem.cs" />
+    <Compile Include="Andi\Utils\IniParser\Exceptions\ParsingException.cs" />
+    <Compile Include="Andi\Utils\IniParser\FileIniParser.cs" />
+    <Compile Include="Andi\Utils\IniParser\Helpers\Assert.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\Configuration\BaseIniParserConfiguration.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\Configuration\DefaultIniParserConfiguration.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\Configuration\IIniParserConfiguration.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\Formatting\DefaultIniDataFormatter.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\Formatting\IIniDataFormatter.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\IniData.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\KeyData.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\KeyDataCollection.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\SectionData.cs" />
+    <Compile Include="Andi\Utils\IniParser\Model\SectionDataCollection.cs" />
+    <Compile Include="Andi\Utils\IniParser\Parser\IniDataParser.cs" />
+    <Compile Include="Andi\Utils\IniParser\StreamIniDataParser.cs" />
+    <Compile Include="Andi\Utils\IniParser\StringIniParser.cs" />
+    <Compile Include="Andi\Controls\ListControlDrawItemEventArgs.cs" />
+    <Compile Include="Andi\Controls\ListControlRenderer.cs" />
+    <Compile Include="Andi\Controls\MemoryMan.cs" />
+    <Compile Include="Andi\Utils\RemoveEvents.cs" />
+    <Compile Include="Andi\Controls\StringBuilderExtensions.cs" />
+    <Compile Include="Andi\Controls\StringExtensions.cs" />
+    <Compile Include="Andi\Controls\TabControl\AndiCustomTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\AndiCustomTabStyleProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\NativeMethods.cs" />
+    <Compile Include="Andi\Controls\TabControl\TabStyle.cs" />
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleAngledProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleChromeProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleDefaultProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleIE8Provider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleNoneProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleRoundedProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleVisualStudioProvider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\TabStyleProviders\TabStyleVS2010Provider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabControl\ThemedColors.cs" />
+    <Compile Include="Andi\Controls\TabList\DefaultTabListPageRenderer.cs" />
+    <Compile Include="Andi\Controls\TabList\Design\TabListDesigner.cs" />
+    <Compile Include="Andi\Controls\TabList\Design\TabListPageDesigner.cs" />
+    <Compile Include="Andi\Controls\TabList\ITabListPageRenderer.cs" />
+    <Compile Include="Andi\Controls\TabList\TabList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabList\TabListControlCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabList\TabListPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabList\TabListPageCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Andi\Controls\TabList\TabListPageRenderer.cs" />
+    <Compile Include="Andi\Controls\TabList\TabListPageState.cs" />
+    <Compile Include="Andi\Controls\Theming.cs" />
+    <Compile Include="Andi\Controls\VS2012LightRenderer.cs" />
+    <Compile Include="Andi\Controls\VS2012LightTheme.cs" />
+    <Compile Include="Andi\vEvolutions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\vEvolutions.Designer.cs">
+      <DependentUpon>vEvolutions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\vExperience.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\vExperience.Designer.cs">
+      <DependentUpon>vExperience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\vHG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\vHG.Designer.cs">
+      <DependentUpon>vHG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Utils\DB\MoveList.cs" />
+    <Compile Include="Andi\vMVSt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\vMVSt.Designer.cs">
+      <DependentUpon>vMVSt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Andi\Utils\ByteConverter.cs" />
+    <Compile Include="Andi\Utils\DB\Database.cs" />
+    <Compile Include="Andi\Utils\ImageIconHandler.cs" />
+    <Compile Include="Andi\vWildEx4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Andi\vWildEx4.Designer.cs">
+      <DependentUpon>vWildEx4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Andi\Controls\AndiColorComboBox.resx" />
+    <EmbeddedResource Include="Andi\Controls\FastColoredTextBox\FastColoredTextBox.resx">
+      <DependentUpon>FastColoredTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\Controls\FastColoredTextBox\FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\Controls\FastColoredTextBox\GoToForm.resx">
+      <DependentUpon>GoToForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\Controls\FastColoredTextBox\HotkeysEditorForm.resx">
+      <DependentUpon>HotkeysEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\Controls\FastColoredTextBox\ReplaceForm.resx">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\Controls\HexBox\HexBox.resx">
+      <DependentUpon>HexBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\Controls\ListBoxTabs.resx">
+      <DependentUpon>ListBoxTabs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\Utils\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\vEvolutions.resx">
+      <DependentUpon>vEvolutions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\vExperience.resx">
+      <DependentUpon>vExperience.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\vHG.resx">
+      <DependentUpon>vHG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\vMVSt.resx">
+      <DependentUpon>vMVSt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Andi\vWildEx4.resx">
+      <DependentUpon>vWildEx4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="dir\Database\ninfia_db0ae7.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="dir\Icons\item_icon_bw2.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="dir\Icons\pkm_icon_xy.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Andi\Controls\HexBox\HexBox.snk" />
+    <None Include="Andi\Utils\IniParser\Model\IniData.cs.rej" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dir\Icons\about.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\data.txt" />
+    <None Include="Resources\sort-rating-descending.png" />
+    <None Include="Resources\sort-rating.png" />
+    <None Include="Resources\sort-quantity-descending.png" />
+    <None Include="Resources\sort-quantity.png" />
+    <None Include="Resources\sort-number-descending.png" />
+    <None Include="Resources\sort-number.png" />
+    <None Include="Resources\sort-alphabet-descending.png" />
+    <None Include="Resources\sort-alphabet.png" />
+    <None Include="Resources\magnifier-left.png" />
+    <None Include="Resources\0.png" />
+    <None Include="Resources\application-detail.png" />
+    <None Include="Resources\billboard-empty.png" />
+    <EmbeddedResource Include="Andi\Controls\HexBox\HexBox.bmp" />
+    <Content Include="Andi\Controls\ImageBox\ImageBox.bmp" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\folder-open.png" />
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dir\Langs\" />
+    <Folder Include="dir\Libs\" />
+    <Folder Include="dir\Plugins\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

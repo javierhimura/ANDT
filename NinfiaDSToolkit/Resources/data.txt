@@ -1,0 +1,61 @@
+
+Hidden Grotto/Hollow
+-- BW2 : a/2/7/3
+
+Moveset
+-- BW2  : a/0/1/8
+-- BW   : a/0/1/8
+-- DPPt : poketool/personal/wotbl.narc
+-- HGSS : a/0/3/3
+
+Experience Table
+-- BW2  : a/0/1/7
+-- BW   : a/0/1/7
+-- HGSS : /a/0/0/3
+-- DPPt : /poketool/personal/pl_growtbl.narc
+
+Battle Subway / PWT / Battle Frointer / Tower / Rental
+-- Pokemon Data          --- Trainer Data            --- Comment--------------------
+------------------------------------------------------------------------------------
+-- a/2/1/1               --- a/2/1/2                 --- Battle Subway        BW2
+-- a/2/1/4               --- a/2/1/5                 --- Battle Subway        BW
+-- a/2/5/7               ------------------------------- PWT-Rental Pokemon   BW2
+-- a/2/6/1               --- a/2/6/2                 --- PWT-Rental Trainer   BW2
+-- a/2/5/0               --- a/2/4/9                 --- PWT-Driftveil Tourna BW2
+-- a/2/5/0               --- a/2/4/8                 --- PWT-Mix Single Tourn BW2
+-- a/2/5/3               --- a/2/5/2                 --- PWT-LeaderChampion T BW2
+-- a/2/5/6               --- a/2/5/5                 --- PWT-MixMaster T      BW2
+-- a/2/5/6               --- a/2/5/4                 --- PWT-Single           BW2
+-- a/2/5/3               --- a/2/5/1                 --- PWT-SingleBonusTeam  BW2
+-- b_pl_stage/pl_bsdpm   ------------------------------- BF-Rental            Pt
+-- b_pl_tower/pl_btdpm   --- b_pl_tower/pl_btdtr     --- BF-Tower             Pt
+-- b_tower/pl_btdpm      --- b_tower/pl_btdtr        --- BF-Tower             PtDP
+-- a/2/0/3               --- a/2/0/2                 --- BF-Tower             HGSS
+-- a/2/0/4               ------------------------------- BF-Rental            HGSS
+
+Wild Pokemon Ex
+-- HGSS  : a/1/0/2
+-- DPPt  : arc\encdata_ex.narc
+
+-- 0 Feebas ?
+-- 1 ?
+-- 2,3,4 Honey Tree P
+-- 5,6,7 Honey Tree D
+-- 8 Trophy Garden DP
+-- 9-10 Safari ?
+-- 11 ?
+
+Evolution Pokemon
+-- BW/BW2  : a/0/1/9
+-- DPPt    : /poketool/personal/evo.narc
+-- HG/SS   : a/0/3/4
+
+BaseEvolution / BabyBreedingPokemon
+-- BW/BW2       : a/0/2/0
+-- D/P/Pt/HG/SS :/poketool/personal/pms.narc
+
+In-Game Trade
+-- BW2    : a/1/6/3
+-- BW     : a/1/6/5
+-- HGSS   : a/1/6/5
+-- DPPt   : /fielddata/pokemon_trade/fld_trade
