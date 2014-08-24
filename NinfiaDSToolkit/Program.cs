@@ -5,13 +5,14 @@ using System.Security.AccessControl;
 using System.Security.Principal;
 using System.Windows.Forms;
 using NinfiaDSToolkit.Andi.Controls;
-using NinfiaDSToolkit.Andi.Utils.DB;
+using NinfiaDSToolkit.Andi.Utils;
 
 namespace NinfiaDSToolkit
 {
     static class Program
     {
         public static MainForm mForm;
+        public static string GlobalPath;
         //public static vHome vFHome;
 
         /// <summary>
@@ -23,7 +24,7 @@ namespace NinfiaDSToolkit
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
             MemoryManager.AttachApp();
-
+            GlobalPath = Application.StartupPath;
             if (WriteAccess(Application.StartupPath))
             {
                 mForm = new MainForm();

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Andi Ninfia DS Toolkit")]
-[assembly: AssemblyDescription("Usefull Tool for Editing Some Pokemon DS Data")]
+[assembly: AssemblyTitle("NinfiaDSToolkit")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Andi")]
-[assembly: AssemblyProduct("Ninfia DS Toolkit")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("NinfiaDSToolkit")]
 [assembly: AssemblyCopyright("2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,4 +1,4 @@
-﻿namespace ListBoxTabs {
+﻿namespace NinfiaDSToolkit.Andi.Controls {
 	partial class ListBoxTabs {
 		/// <summary> 
 		/// Required designer variable.

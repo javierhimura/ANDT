@@ -55,18 +55,31 @@ namespace NinfiaDSToolkit
             this.menuItem11 = new System.Windows.Forms.MenuItem();
             this.menuItem15 = new System.Windows.Forms.MenuItem();
             this.menuItem17 = new System.Windows.Forms.MenuItem();
+            this.menuItem7 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.menuItem9 = new System.Windows.Forms.MenuItem();
+            this.menuItem21 = new System.Windows.Forms.MenuItem();
+            this.menuItem5 = new System.Windows.Forms.MenuItem();
+            this.menuItem6 = new System.Windows.Forms.MenuItem();
             this.menuItem24 = new System.Windows.Forms.MenuItem();
             this.menuItem13 = new System.Windows.Forms.MenuItem();
+            this.menuItem20 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
+            this.menuItem10 = new System.Windows.Forms.MenuItem();
+            this.menuItem14 = new System.Windows.Forms.MenuItem();
+            this.menuItem8 = new System.Windows.Forms.MenuItem();
+            this.btn_showhome = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.menuItem16 = new System.Windows.Forms.MenuItem();
             this.btn_exit = new System.Windows.Forms.MenuItem();
             this.aStatusBar1 = new NinfiaDSToolkit.Andi.Controls.AStatusBar();
+            this.statusBarPanel2 = new System.Windows.Forms.StatusBarPanel();
             this.statusBarPanel1 = new System.Windows.Forms.StatusBarPanel();
             this.sbp_1 = new System.Windows.Forms.StatusBarPanel();
             this.panel_dock1 = new WeifenLuo.WinFormsUI.Docking.DockPanel();
             this.vS2012LightTheme1 = new WeifenLuo.WinFormsUI.Docking.VS2012LightTheme();
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbp_1)).BeginInit();
             this.SuspendLayout();
@@ -86,10 +99,14 @@ namespace NinfiaDSToolkit
             this.menuItem11,
             this.menuItem15,
             this.menuItem17,
+            this.menuItem7,
             this.menuItem2,
+            this.menuItem4,
             this.menuItem24,
             this.menuItem13,
-            this.menuItem12,
+            this.menuItem20,
+            this.menuItem8,
+            this.btn_showhome,
             this.menuItem3,
             this.menuItem16,
             this.btn_exit});
@@ -129,55 +146,134 @@ namespace NinfiaDSToolkit
             this.menuItem17.Text = "Evolution and BaseEvolution Editor (All)";
             this.menuItem17.Click += new System.EventHandler(this.menuItem17_Click);
             // 
+            // menuItem7
+            // 
+            this.menuItem7.Index = 6;
+            this.menuItem7.Text = "In-Game Trade Editor (All)";
+            this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
+            // 
             // menuItem2
             // 
-            this.menuItem2.Index = 6;
+            this.menuItem2.Index = 7;
             this.menuItem2.Text = "-";
+            // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 8;
+            this.menuItem4.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem9,
+            this.menuItem21,
+            this.menuItem5,
+            this.menuItem6});
+            this.menuItem4.Text = "Tools";
+            // 
+            // menuItem9
+            // 
+            this.menuItem9.Index = 0;
+            this.menuItem9.Text = "Narc Test";
+            this.menuItem9.Click += new System.EventHandler(this.menuItem9_Click);
+            // 
+            // menuItem21
+            // 
+            this.menuItem21.Index = 1;
+            this.menuItem21.Text = "BLZ Test";
+            this.menuItem21.Click += new System.EventHandler(this.menuItem21_Click);
+            // 
+            // menuItem5
+            // 
+            this.menuItem5.Index = 2;
+            this.menuItem5.Text = "-";
+            // 
+            // menuItem6
+            // 
+            this.menuItem6.Index = 3;
+            this.menuItem6.Text = "OVA9 Table";
+            this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click);
             // 
             // menuItem24
             // 
-            this.menuItem24.Index = 7;
+            this.menuItem24.Index = 9;
             this.menuItem24.Text = "Information";
             this.menuItem24.Click += new System.EventHandler(this.menuItem24_Click);
             // 
             // menuItem13
             // 
-            this.menuItem13.Index = 8;
+            this.menuItem13.Index = 10;
             this.menuItem13.Text = "-";
+            // 
+            // menuItem20
+            // 
+            this.menuItem20.Index = 11;
+            this.menuItem20.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem12,
+            this.menuItem10,
+            this.menuItem14});
+            this.menuItem20.Text = "Links";
             // 
             // menuItem12
             // 
-            this.menuItem12.Index = 9;
-            this.menuItem12.Text = "Wiki";
+            this.menuItem12.Index = 0;
+            this.menuItem12.Text = "Github Wiki";
             this.menuItem12.Click += new System.EventHandler(this.menuItem12_Click);
+            // 
+            // menuItem10
+            // 
+            this.menuItem10.Index = 1;
+            this.menuItem10.Text = "Github Repo";
+            this.menuItem10.Click += new System.EventHandler(this.menuItem10_Click);
+            // 
+            // menuItem14
+            // 
+            this.menuItem14.Index = 2;
+            this.menuItem14.Text = "BitBucket Repo";
+            this.menuItem14.Click += new System.EventHandler(this.menuItem14_Click);
+            // 
+            // menuItem8
+            // 
+            this.menuItem8.Index = 12;
+            this.menuItem8.Text = "Forums";
+            this.menuItem8.Click += new System.EventHandler(this.menuItem8_Click);
+            // 
+            // btn_showhome
+            // 
+            this.btn_showhome.Index = 13;
+            this.btn_showhome.Text = "Tentang";
+            this.btn_showhome.Click += new System.EventHandler(this.btn_showhome_Click_1);
             // 
             // menuItem3
             // 
-            this.menuItem3.Index = 10;
+            this.menuItem3.Index = 14;
             this.menuItem3.Text = "-";
             // 
             // menuItem16
             // 
-            this.menuItem16.Index = 11;
+            this.menuItem16.Index = 15;
             this.menuItem16.Text = "Restart";
             this.menuItem16.Click += new System.EventHandler(this.menuItem16_Click);
             // 
             // btn_exit
             // 
-            this.btn_exit.Index = 12;
-            this.btn_exit.Text = "Keluar";
+            this.btn_exit.Index = 16;
+            this.btn_exit.Text = "Exit";
             // 
             // aStatusBar1
             // 
             this.aStatusBar1.Location = new System.Drawing.Point(0, 436);
             this.aStatusBar1.Name = "aStatusBar1";
             this.aStatusBar1.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+            this.statusBarPanel2,
             this.statusBarPanel1,
             this.sbp_1});
             this.aStatusBar1.ShowPanels = true;
             this.aStatusBar1.Size = new System.Drawing.Size(523, 22);
             this.aStatusBar1.TabIndex = 0;
             this.aStatusBar1.Text = "Ready";
+            // 
+            // statusBarPanel2
+            // 
+            this.statusBarPanel2.BorderStyle = System.Windows.Forms.StatusBarPanelBorderStyle.None;
+            this.statusBarPanel2.Name = "statusBarPanel2";
+            this.statusBarPanel2.Text = "Ready";
             // 
             // statusBarPanel1
             // 
@@ -186,7 +282,7 @@ namespace NinfiaDSToolkit
             this.statusBarPanel1.BorderStyle = System.Windows.Forms.StatusBarPanelBorderStyle.None;
             this.statusBarPanel1.Name = "statusBarPanel1";
             this.statusBarPanel1.Text = "-";
-            this.statusBarPanel1.Width = 466;
+            this.statusBarPanel1.Width = 366;
             // 
             // sbp_1
             // 
@@ -265,6 +361,7 @@ namespace NinfiaDSToolkit
             this.Menu = this.aContextMenu1;
             this.Name = "MainForm";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarPanel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbp_1)).EndInit();
             this.ResumeLayout(false);
@@ -280,10 +377,13 @@ namespace NinfiaDSToolkit
         private AStatusBar aStatusBar1;
         private System.Windows.Forms.StatusBarPanel sbp_1;
         private WeifenLuo.WinFormsUI.Docking.VS2012LightTheme vS2012LightTheme1;
+        internal System.Windows.Forms.MenuItem btn_showhome;
         internal WeifenLuo.WinFormsUI.Docking.DockPanel panel_dock1;
         private MenuItem menuItem2;
         private MenuItem btn_open_hgrotto;
+        private MenuItem menuItem4;
         internal StatusBarPanel statusBarPanel1;
+        private MenuItem menuItem9;
         private MenuItem menuItem11;
         private MenuItem menuItem12;
         private MenuItem menuItem13;
@@ -293,6 +393,15 @@ namespace NinfiaDSToolkit
         private MenuItem menuItem19;
         private MenuItem menuItem24;
         private MenuItem menuItem16;
+        private MenuItem menuItem21;
+        internal StatusBarPanel statusBarPanel2;
+        private MenuItem menuItem5;
+        private MenuItem menuItem6;
+        private MenuItem menuItem7;
+        private MenuItem menuItem10;
+        private MenuItem menuItem14;
+        private MenuItem menuItem8;
+        private MenuItem menuItem20;
 
     }
 }

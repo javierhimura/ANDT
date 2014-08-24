@@ -2,17 +2,32 @@
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using SevenZipLib;
+using ICSharpCode.SharpZipLib.Zip;
 
 namespace NinfiaDSToolkit.Andi.Utils
 {
     public class ImageIconHandler
     {
+        
         public static Image setImagePictureBox(int index)
         {
             GC.Collect();
+            
             string zipPath = Application.StartupPath + @"\dir\Icons\pkm_icon_xy.zip";
 
+            using (ZipFile zipfile = new ZipFile(zipPath))
+            {
+                try
+                {
+                    return Image.FromStream(zipfile.GetInputStream(zipfile.GetEntry(index + ".png")));
+                }
+                catch
+                {
+                    return Properties.Resources._0;
+                }
+            }
+            
+            /*
             using (SevenZipArchive archive = new SevenZipArchive(zipPath))
             {
                 try
@@ -31,14 +46,27 @@ namespace NinfiaDSToolkit.Andi.Utils
                     return Properties.Resources._0;
                 }
 
-            }
-         }
+            }*/
+        }
 
         public static Image setImagePictureBox(int index, int forme)
         {
             GC.Collect();
             string zipPath = Application.StartupPath + @"\dir\Icons\pkm_icon_xy.zip";
 
+            using (ZipFile zipfile = new ZipFile(zipPath))
+            {
+                try
+                {
+                    return Image.FromStream(zipfile.GetInputStream(zipfile.GetEntry(index + "-" + forme + ".png")));
+                }
+                catch
+                {
+                    return Properties.Resources._0;
+                }
+            }
+
+            /*
             using (SevenZipArchive archive = new SevenZipArchive(zipPath))
             {
                 try
@@ -56,8 +84,7 @@ namespace NinfiaDSToolkit.Andi.Utils
                 {
                     return Properties.Resources._0;
                 }
-
-            }
+            }*/
         }
 
         public static Image setImageItemPictureBox(int index)
@@ -65,6 +92,19 @@ namespace NinfiaDSToolkit.Andi.Utils
             GC.Collect();
             string zipPath = Application.StartupPath + @"\dir\Icons\item_icon_bw2.zip";
 
+            using (ZipFile zipfile = new ZipFile(zipPath))
+            {
+                try
+                {
+                    return Image.FromStream(zipfile.GetInputStream(zipfile.GetEntry(index + ".png")));
+                }
+                catch
+                {
+                    return Properties.Resources._0;
+                }
+            }
+
+            /*
             using (SevenZipArchive archive = new SevenZipArchive(zipPath))
             {
                 try
@@ -82,8 +122,7 @@ namespace NinfiaDSToolkit.Andi.Utils
                 {
                     return Properties.Resources._0;
                 }
-
-            }
+            }*/
         }
     }
 }

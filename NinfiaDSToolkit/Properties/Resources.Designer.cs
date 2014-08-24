@@ -73,6 +73,16 @@ namespace NinfiaDSToolkit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1downarrow1 {
+            get {
+                object obj = ResourceManager.GetObject("_1downarrow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap application_detail {
             get {
                 object obj = ResourceManager.GetObject("application_detail", resourceCulture);
@@ -105,7 +115,12 @@ namespace NinfiaDSToolkit.Properties {
         ///-- BW2  : a/0/1/7
         ///-- BW   : a/0/1/7
         ///-- HGSS : /a/0/0/3
-        ///-- DPPt : /poketool/personal/pl_growtbl.narc.
+        ///-- DPPt : /poketool/personal/pl_growtbl.narc
+        ///
+        ///Battle Subway / PWT / Battle Frointer / Tower / Rental
+        ///-- Pokemon Data          --- Trainer Data            --- Comment--------------------
+        ///------------------------------------------------------------------------------------
+        ///-- a/2/1 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string data {
             get {
@@ -126,6 +141,16 @@ namespace NinfiaDSToolkit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Expand {
+            get {
+                object obj = ResourceManager.GetObject("Expand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder_open {
             get {
                 object obj = ResourceManager.GetObject("folder_open", resourceCulture);
@@ -139,6 +164,26 @@ namespace NinfiaDSToolkit.Properties {
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_expand {
+            get {
+                object obj = ResourceManager.GetObject("icon_expand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_struct_hide_collapsed {
+            get {
+                object obj = ResourceManager.GetObject("icon_struct_hide_collapsed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -229,6 +274,26 @@ namespace NinfiaDSToolkit.Properties {
         internal static System.Drawing.Bitmap sort_rating_descending {
             get {
                 object obj = ResourceManager.GetObject("sort_rating_descending", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap up_256 {
+            get {
+                object obj = ResourceManager.GetObject("up_256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Upload {
+            get {
+                object obj = ResourceManager.GetObject("Upload", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
