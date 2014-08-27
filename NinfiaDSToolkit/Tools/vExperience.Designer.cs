@@ -73,7 +73,7 @@ namespace NinfiaDSToolkit.Tools
             this.bt_Open.Name = "bt_Open";
             this.bt_Open.Size = new System.Drawing.Size(56, 22);
             this.bt_Open.Text = "Open";
-            this.bt_Open.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.bt_Open.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // bt_Save
             // 
@@ -82,7 +82,7 @@ namespace NinfiaDSToolkit.Tools
             this.bt_Save.Name = "bt_Save";
             this.bt_Save.Size = new System.Drawing.Size(63, 22);
             this.bt_Save.Text = "Save ...";
-            this.bt_Save.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.bt_Save.Click += new System.EventHandler(this.SaveFile_Click);
             // 
             // splitContainer1
             // 

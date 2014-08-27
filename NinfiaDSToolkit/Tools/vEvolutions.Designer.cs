@@ -94,7 +94,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(56, 22);
             this.toolStripButton1.Text = "Open";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // toolStripButton2
             // 
@@ -103,7 +103,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(51, 22);
             this.toolStripButton2.Text = "Save";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.toolStripButton2.Click += new System.EventHandler(this.SaveFile_Click);
             // 
             // toolStripLabel1
             // 

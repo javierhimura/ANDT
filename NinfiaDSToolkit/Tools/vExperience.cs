@@ -6,66 +6,40 @@ using NinfiaDSToolkit.Andi.Controls.HexBox;
 using NinfiaDSToolkit.Andi.Utils;
 using NinfiaDSToolkit.Andi.Utils.Narc;
 using NinfiaDSToolkit.Tools.Internal;
+using NinfiaDSToolkit.Tools.Object;
 using SourceGrid;
 using WeifenLuo.WinFormsUI.Docking;
 using ContentAlignment = DevAge.Drawing.ContentAlignment;
 
 namespace NinfiaDSToolkit.Tools
 {
-    public partial class vExperience : DockContent
+    public partial class vExperience : DockContent, ICommonFormLayout, IGridFormLayout
     {
         AndiNarcReader narc = new AndiNarcReader();
         Stream a = new MemoryStream();
-        private bool checkgridfocus = true;
-        private string _LastPath = "";
+        public bool checkgridfocus = true;
+        public string _LastPath = "";
 
         public vExperience()
         {
             InitializeComponent();
+            EventsFormLoad();
+        }
+
+        #region CommonFunction
+        public void EventsFormLoad()
+        {
             andiCustomTabControl1.Enabled = false;
             grid1.SelectionMode = GridSelectionMode.Row;
             grid1.Selection.EnableMultiSelection = false;
-            grid1.MouseClick += Selection_SelectionChanged;
-            grid1.KeyDown += Selection_SelectionChanged;
-            grid1.KeyUp += Selection_SelectionChanged;
+            grid1.MouseClick += BaseGridSelection_SelectionChanged;
+            grid1.KeyDown += BaseGridSelection_SelectionChanged;
+            grid1.KeyUp += BaseGridSelection_SelectionChanged;
             _LastPath = Program.GlobalPath;
-            grid1.Selection.FocusRowEntered += Selection_FocusRowEntered;
+            grid1.Selection.FocusRowEntered += BaseGridSelection_FocusRowEntered;
         }
 
-        void grideventchanged()
-        {
-            try
-            {
-                label1.Text = grid1.Selection.ActivePosition.Row + "";
-                nm_value.Value = (long)grid1[grid1.Selection.ActivePosition.Row, 1].Value;
-            }
-            catch { }
-        }
-
-        private void Selection_FocusRowEntered(object sender, RowEventArgs e)
-        {
-            grideventchanged();
-
-            if (!checkgridfocus)
-            {
-                andiListBox1.Focus();
-                checkgridfocus = true;
-            }
-        }
-
-        private void Selection_SelectionChanged(object sender, KeyEventArgs e)
-        {
-            grideventchanged();
-            checkgridfocus = true;
-        }
-
-        private void Selection_SelectionChanged(object sender, MouseEventArgs e)
-        {
-            grideventchanged();
-            checkgridfocus = true;
-        }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        public void OpenFile_Click(object sender, EventArgs e)
         {
             string path = "";
 
@@ -93,53 +67,42 @@ namespace NinfiaDSToolkit.Tools
                 a.Close();
 
                 narc.OpenData(path);
-
-                andiListBox1.Items.Clear();
-                string[] xxx = Database.GetCommonText(1);
-                
-                for (int i = 0; i < narc.FileCount; i++)
-                {
-                    if (i > 0 && i < 7)
-                    {
-                        andiListBox1.Items.Add(xxx[i-1]);
-                    }
-                    else
-                    {
-                        andiListBox1.Items.Add("Data " + i);
-                    }
-                }
-
-                andiListBox1.SelectedIndex = 0;
-                andiCustomTabControl1.Enabled = true;
+                EventsAfterOpenFile();
             }
         }
 
-        private void andiListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void SaveFile_Click(object sender, EventArgs e)
         {
-            a = new MemoryStream(narc.getdataselected(andiListBox1.SelectedIndex));
-            checkgridfocus = false;
-            loadhexview();
-            loaddata();
+            AndiFileDialog.NarcSaveDialog(narc, Path.GetDirectoryName(_LastPath), "Save Experience Data", "narc file|*.narc");
         }
 
-        private void loaddata()
+        public void EventsAfterOpenFile()
         {
-            int lenghtdata = (int) a.Length/4;
-            long[] data = new long[lenghtdata];
+            andiListBox1.Items.Clear();
+            string[] xxx = Database.GetCommonText(1);
 
-            for (int i = 0; i < lenghtdata; i++)
+            for (int i = 0; i < narc.FileCount; i++)
             {
-                byte[] temp = new byte[4];
-                a.Position = i*4;
-                a.Read(temp, 0, 4);
-                data[i] = BitConverter.ToUInt32(temp, 0);
+                if (i > 0 && i < 7)
+                {
+                    andiListBox1.Items.Add(xxx[i - 1]);
+                }
+                else
+                {
+                    andiListBox1.Items.Add("Data " + i);
+                }
             }
 
-            FillGrid.Build(grid1, lenghtdata,1,"Exp");
-            FillGrid.Fill(grid1, data);
+            andiListBox1.SelectedIndex = 0;
+            andiCustomTabControl1.Enabled = true;
         }
 
-        void loadhexview()
+        public void WriteCurrentBack_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void HexView()
         {
             DynamicFileByteProvider dynamicFileByteProvider = null;
 
@@ -152,6 +115,78 @@ namespace NinfiaDSToolkit.Tools
 
             hexBox1.ByteProvider = dynamicFileByteProvider;
 
+        }
+
+        public void LoadCurrentData()
+        {
+            int lenghtdata = (int)a.Length / 4;
+            long[] data = new long[lenghtdata];
+
+            for (int i = 0; i < lenghtdata; i++)
+            {
+                byte[] temp = new byte[4];
+                a.Position = i * 4;
+                a.Read(temp, 0, 4);
+                data[i] = BitConverter.ToUInt32(temp, 0);
+            }
+
+            FillGrid.Build(grid1, lenghtdata, 1, "Exp");
+            FillGrid.Fill(grid1, data);
+        }
+
+        public void WriteNarcBack()
+        {
+            byte[] temp = new byte[a.Length];
+
+            a.Position = 0;
+            a.Read(temp, 0, (int)a.Length);
+
+            narc.ReplaceEntry(andiListBox1.SelectedIndex, temp.Length, temp);
+        }
+        #endregion
+
+        #region Grid EventHandler Function
+        public void BaseGridSelectionChanged()
+        {
+            try
+            {
+                label1.Text = grid1.Selection.ActivePosition.Row + "";
+                nm_value.Value = (long)grid1[grid1.Selection.ActivePosition.Row, 1].Value;
+            }
+            catch { }
+        }
+
+        public void BaseGridSelection_FocusRowEntered(object sender, RowEventArgs e)
+        {
+            BaseGridSelectionChanged();
+
+            if (!checkgridfocus)
+            {
+                andiListBox1.Focus();
+                checkgridfocus = true;
+            }
+        }
+
+        public void BaseGridSelection_SelectionChanged(object sender, KeyEventArgs e)
+        {
+            BaseGridSelectionChanged();
+            checkgridfocus = true;
+        }
+
+        public void BaseGridSelection_SelectionChanged(object sender, MouseEventArgs e)
+        {
+            BaseGridSelectionChanged();
+            checkgridfocus = true;
+        }
+        #endregion
+
+        #region Other EventHandler
+        private void andiListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            a = new MemoryStream(narc.getdataselected(andiListBox1.SelectedIndex));
+            checkgridfocus = false;
+            HexView();
+            LoadCurrentData();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -170,22 +205,8 @@ namespace NinfiaDSToolkit.Tools
             grid1[r, 1].View = view;
             grid1.Refresh();
 
-            writebacknarc();
+            WriteNarcBack();
         }
-
-        void writebacknarc()
-        {
-            byte[] temp = new byte[a.Length];
-
-            a.Position = 0;
-            a.Read(temp, 0, (int)a.Length);
-
-            narc.ReplaceEntry(andiListBox1.SelectedIndex, temp.Length, temp);
-        }
-
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            AndiFileDialog.NarcSaveDialog(narc, Path.GetDirectoryName(_LastPath), "Save Experience Data", "narc file|*.narc");
-        }
+        #endregion
     }
 }

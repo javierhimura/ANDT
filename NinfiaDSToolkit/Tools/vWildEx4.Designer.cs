@@ -70,7 +70,7 @@
             this.btn_Open.Name = "btn_Open";
             this.btn_Open.Size = new System.Drawing.Size(56, 22);
             this.btn_Open.Text = "Open";
-            this.btn_Open.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btn_Open.Click += new System.EventHandler(this.OpenFile_Click);
             // 
             // btn_Save
             // 
@@ -79,7 +79,7 @@
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(51, 22);
             this.btn_Save.Text = "Save";
-            this.btn_Save.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.btn_Save.Click += new System.EventHandler(this.SaveFile_Click);
             // 
             // toolStripLabel1
             // 
