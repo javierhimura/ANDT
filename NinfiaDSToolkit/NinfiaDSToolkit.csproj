@@ -372,7 +372,10 @@
       <DependentUpon>ovl9tableview.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Internal\ImageBoxUtilities.cs" />
-    <Compile Include="Tools\penum.cs" />
+    <Compile Include="Tools\Object\ICommonFormLayout.cs" />
+    <Compile Include="Tools\Object\ICommonHiddenGrottoLayout.cs" />
+    <Compile Include="Tools\Object\IGridFormLayout.cs" />
+    <Compile Include="Tools\vEnum.cs" />
     <Compile Include="Tools\vEvolutions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -555,7 +558,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="dir\Libs\" />
-    <Folder Include="Tools\Object\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
