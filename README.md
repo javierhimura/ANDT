@@ -17,6 +17,7 @@ Current tool is supported:
 - **Evolution Editor** (`Evolution` `BabyEvolution` supported, `Gen 4` `Gen 5`)
 - **Experience Table Editor** (`Experience` supported, `gen 4` `gen 5`)
 - **Wild Encounter Ex** (`UnderGround` `HoneyTree` `TrophyGarden` `Safari` supported, `DPPt`)
+- BLZ, Source from [CUE](http://www.romhacking.net/utilities/826/)
 
 ### Next Todo ###
 
@@ -29,16 +30,25 @@ Next Tools:
 - Extending : **Moveset Editor** (supporting `Gen 6`)
 - Extending : **Evolution Editor** (supporting `Gen 6`)
 
-
-
 Note :
 
 - `Gen 4` : Diamond, Pearl, Platinum, HG, SS
 - `Gen 5` : Black, White, Black 2, White 2
 - `Gen 6` : X , Y
 
-### Make it your own tool ###
+### Credit ###
 
-Since this application open source and [Apache License](https://github.com/andibadra/ANDT/blob/master/LICENSE).
+- [PokemonProject](http://projectpokemon.org/) Forum members 
+- [CUE](http://www.romhacking.net/utilities/826/) for BLZ Code
+- [Dirbaio](https://github.com/Dirbaio/NSMB-Editor) for DS Filesystem
+- [Barubary for](https://code.google.com/p/dsdecmp/) LZSS code
+- [Benito Palacious](https://github.com/pleonex) for [Tinke source code](https://code.google.com/p/tinke)
+- Other
+
+### License ###
+
+Since this application open source and [Apache License](https://github.com/andibadra/ANDT/blob/master/LICENSE). 
+
+Some component, library and source code used on this tool is licensed GNUv2 License like [NSMB-Editor](https://github.com/Dirbaio/NSMB-Editor) , [CUE](http://www.romhacking.net/utilities/826/), and [DSDecmp](https://code.google.com/p/dsdecmp/) for example.
 
 2014
