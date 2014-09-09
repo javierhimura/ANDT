@@ -24,6 +24,7 @@ Current tool is supported:
 Next Tools:
 
 - ReDesign On main form
+- Random stuff~
 - Add : **In-Game Trade Editor** (`All Field` supported, `Gen 4` `Gen 5`)
 - Add : **Ova9 table editor** (`DS`)
 - Add : **PWT Subway Editor** (`Gen 4` `Gen 5`)
