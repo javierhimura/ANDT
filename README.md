@@ -23,6 +23,7 @@ Current tool is supported:
 
 Next Tools:
 
+- ReDesign On main form
 - Add : **In-Game Trade Editor** (`All Field` supported, `Gen 4` `Gen 5`)
 - Add : **Ova9 table editor** (`DS`)
 - Add : **PWT Subway Editor** (`Gen 4` `Gen 5`)
@@ -36,6 +37,10 @@ Note :
 - `Gen 5` : Black, White, Black 2, White 2
 - `Gen 6` : X , Y
 
+### Help ###
+
+For while just go wiki page on this repo.
+
 ### Credit ###
 
 - [PokemonProject](http://projectpokemon.org/) Forum members 
@@ -47,8 +52,8 @@ Note :
 
 ### License ###
 
-Since this application open source and [Apache License](https://github.com/andibadra/ANDT/blob/master/LICENSE). 
+This tool using [Apache License v2](https://github.com/andibadra/ANDT/blob/master/LICENSE) as main license on my own component and code. Several MIT license component, library, and code will covered with this license. But some code, and library already modified on this tool will remaining licensed by GNUv2 or GNUv3 depend on original license. 
 
-Some component, library and source code used on this tool is licensed GNUv2 License like [NSMB-Editor](https://github.com/Dirbaio/NSMB-Editor) , [CUE](http://www.romhacking.net/utilities/826/), and [DSDecmp](https://code.google.com/p/dsdecmp/) for example.
+Some component, library and source code used on this tool is licensed by GNUv2 or GNUv3 License like [NSMB-Editor](https://github.com/Dirbaio/NSMB-Editor)([license](https://github.com/Dirbaio/NSMB-Editor/blob/master/LICENSE.txt)) , [CUE](http://www.romhacking.net/utilities/826/), and [DSDecmp](https://code.google.com/p/dsdecmp/) for example.
 
-2014
+2014, Surabaya
