@@ -28,6 +28,7 @@ Next Tools:
 - Add : **In-Game Trade Editor** (`All Field` supported, `Gen 4` `Gen 5`)
 - Add : **Ova9 table editor** (`DS`)
 - Add : **PWT Subway Editor** (`Gen 4` `Gen 5`)
+- Add : **Item Editor** (`Gen 4` `Gen 5` `Gen 6`)
 - Extending : **Moveset Editor** (supporting `Egg Moves`)
 - Extending : **Moveset Editor** (supporting `Gen 6`)
 - Extending : **Evolution Editor** (supporting `Gen 6`)
