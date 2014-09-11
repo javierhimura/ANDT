@@ -10,34 +10,43 @@ Forum link for this tool : [Here](http://projectpokemon.org/forums/showthread.ph
 
 Some tool on **ANDT** is unique like Hidden Grotto / Hollow Editor, Moveset Editor and other. Multiple document for multiple editing. 
 
-Current tool is supported:
+Specific Tool :
 
 - **Hidden Grotto Editor** (`All Field` supported, `BW2`)
 - **Moveset Editor** (`Moveset` supported, `Gen 4` `Gen 5`)
 - **Evolution Editor** (`Evolution` `BabyEvolution` supported, `Gen 4` `Gen 5`)
 - **Experience Table Editor** (`Experience` supported, `gen 4` `gen 5`)
 - **Wild Encounter Ex** (`UnderGround` `HoneyTree` `TrophyGarden` `Safari` supported, `DPPt`)
-- BLZ, Source from [CUE](http://www.romhacking.net/utilities/826/)
 
 ### Next Todo ###
 
-Next Tools:
-
 - ReDesign On main form
 - Random stuff~
+
+Specific Tool ToDo :
+
 - Add : **In-Game Trade Editor** (`All Field` supported, `Gen 4` `Gen 5`)
 - Add : **Ova9 table editor** (`DS`)
 - Add : **PWT Subway Editor** (`Gen 4` `Gen 5`)
 - Add : **Item Editor** (`Gen 4` `Gen 5` `Gen 6`)
-- Extending : **Moveset Editor** (supporting `Egg Moves`)
-- Extending : **Moveset Editor** (supporting `Gen 6`)
-- Extending : **Evolution Editor** (supporting `Gen 6`)
+- Ext : **Moveset Editor** (supporting `Egg Moves`)
+- Ext : **Moveset Editor** (supporting `Gen 6`)
+- Ext : **Evolution Editor** (supporting `Gen 6`)
+
+Common Tool ToDo :
+
+- Add : **BLZ**, Source from [CUE](http://www.romhacking.net/utilities/826/)
+- Add : **NARC** pack/unpacker
+- Fix : **NARC** reader
+- Add : **GARC** pack/unpacker/reader
 
 Note :
 
 - `Gen 4` : Diamond, Pearl, Platinum, HG, SS
 - `Gen 5` : Black, White, Black 2, White 2
 - `Gen 6` : X , Y
+
+## Help, Legal, and Credit ##
 
 ### Help ###
 
