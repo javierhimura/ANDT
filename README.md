@@ -54,8 +54,8 @@ For while just go wiki page on this repo.
 
 ### License ###
 
-This tool using [Apache License v2](https://github.com/andibadra/ANDT/blob/master/LICENSE) as main license on my own component and code. Several MIT license component, library, and code will covered with this license. But some code, and library already modified on this tool will remaining licensed by GNUv2 or GNUv3 depend on original license. 
+This tool use [Apache License v2](https://github.com/andibadra/ANDT/blob/master/LICENSE) as main license on my own component and code. Several MIT license component, library, and code will covered with this license. 
 
-Some component, library and source code used on this tool is licensed by GNUv2 or GNUv3 License like [NSMB-Editor](https://github.com/Dirbaio/NSMB-Editor)([license](https://github.com/Dirbaio/NSMB-Editor/blob/master/LICENSE.txt)) , [CUE](http://www.romhacking.net/utilities/826/), and [DSDecmp](https://code.google.com/p/dsdecmp/) for example.
+But some code, and library already modified on this tool will kept on their original license. These Code is licensed under GNUv2 or GNUv3 License like [NSMB-Editor](https://github.com/Dirbaio/NSMB-Editor)([license](https://github.com/Dirbaio/NSMB-Editor/blob/master/LICENSE.txt)) , [CUE](http://www.romhacking.net/utilities/826/), [DSDecmp](https://code.google.com/p/dsdecmp/) and other.
 
-2014, Surabaya
+2014
