@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace NinfiaDSToolkit.Tools.Object
+namespace NinfiaDSToolkit.Tools.Internal
 {
     internal interface ICommonFormLayout
     {
+
         void EventsFormLoad();
 
         void OpenFile_Click(object sender, EventArgs e);
@@ -14,6 +12,8 @@ namespace NinfiaDSToolkit.Tools.Object
         void SaveFile_Click(object sender, EventArgs e);
 
         void EventsAfterOpenFile();
+
+        void GotFocusF(object sender, EventArgs e);
 
         void WriteNarcBack();
 

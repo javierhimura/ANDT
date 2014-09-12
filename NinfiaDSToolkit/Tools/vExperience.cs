@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using NinfiaDSToolkit.Andi.Controls.HexBox;
 using NinfiaDSToolkit.Andi.Utils;
 using NinfiaDSToolkit.Andi.Utils.Narc;
 using NinfiaDSToolkit.Tools.Internal;
-using NinfiaDSToolkit.Tools.Object;
 using SourceGrid;
 using WeifenLuo.WinFormsUI.Docking;
-using ContentAlignment = DevAge.Drawing.ContentAlignment;
 
 namespace NinfiaDSToolkit.Tools
 {
@@ -19,6 +16,7 @@ namespace NinfiaDSToolkit.Tools
         Stream a = new MemoryStream();
         public bool checkgridfocus = true;
         public string _LastPath = "";
+        private FileInfo flepath;
 
         public vExperience()
         {
@@ -35,8 +33,12 @@ namespace NinfiaDSToolkit.Tools
             grid1.MouseClick += BaseGridSelection_SelectionChanged;
             grid1.KeyDown += BaseGridSelection_SelectionChanged;
             grid1.KeyUp += BaseGridSelection_SelectionChanged;
+
             _LastPath = Program.GlobalPath;
+            flepath = new FileInfo(_LastPath);
+
             grid1.Selection.FocusRowEntered += BaseGridSelection_FocusRowEntered;
+            this.GotFocus += GotFocusF;
         }
 
         public void OpenFile_Click(object sender, EventArgs e)
@@ -50,17 +52,12 @@ namespace NinfiaDSToolkit.Tools
                 Program.GlobalPath = Path.GetDirectoryName(path);
                 _LastPath = Path.GetDirectoryName(path);
 
-                FileStream a = new FileStream(path, FileMode.Open);
+                flepath = new FileInfo(path);
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
 
-                a.Position = 0;
-                byte[] bytee = new byte[4];
-
-                a.Read(bytee, 0, 4);
-                string check = System.Text.Encoding.ASCII.GetString(bytee);
-
-                if (check != "NARC")
+                if (Utils.CheckMagicHeaderID.get(path) != "NARC")
                 {
-                    MessageBox.Show("This Not NARC File, File Extension Signature is " + check + ", and is not NARC File!", "Error!");
+                    MessageBox.Show("This Not NARC File, File Extension Signature is " + Utils.CheckMagicHeaderID.get(path) + ", and is not NARC File!", "Error!");
                     return;
                 }
 
@@ -95,6 +92,18 @@ namespace NinfiaDSToolkit.Tools
 
             andiListBox1.SelectedIndex = 0;
             andiCustomTabControl1.Enabled = true;
+        }
+
+        public void GotFocusF(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
+            }
+            catch
+            {
+                Program.mForm.toolStripLabel1.Text = "";
+            }
         }
 
         public void WriteCurrentBack_Click(object sender, EventArgs e)

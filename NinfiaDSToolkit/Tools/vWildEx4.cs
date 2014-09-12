@@ -5,8 +5,8 @@ using NinfiaDSToolkit.Andi.Controls.HexBox;
 using NinfiaDSToolkit.Andi.Utils;
 using NinfiaDSToolkit.Andi.Utils.Narc;
 using NinfiaDSToolkit.Tools.Internal;
-using NinfiaDSToolkit.Tools.Object;
 using SourceGrid;
+using SourceGrid.Cells.Views;
 using WeifenLuo.WinFormsUI.Docking;
 
 namespace NinfiaDSToolkit.Tools
@@ -18,24 +18,29 @@ namespace NinfiaDSToolkit.Tools
         public string[] pkmname = new string[1];
         public bool isGridFocus = true;
         public string _LastPath = "";
+        private FileInfo flepath;
 
         public vWildEx4()
         {
             InitializeComponent();
             TabC1.Enabled = false;
-            _LastPath = Program.GlobalPath;
             EventsFormLoad();
         }
 
         #region CommonFunction
         public void EventsFormLoad()
         {
+            _LastPath = Program.GlobalPath;
+            flepath = new FileInfo(_LastPath);
+
             grid1.SelectionMode = GridSelectionMode.Row;
             grid1.Selection.EnableMultiSelection = false;
             grid1.MouseClick += BaseGridSelection_SelectionChanged;
             grid1.KeyDown += BaseGridSelection_SelectionChanged;
             grid1.KeyUp += BaseGridSelection_SelectionChanged;
             grid1.Selection.FocusRowEntered += BaseGridSelection_FocusRowEntered;
+
+            this.GotFocus += GotFocusF;
         }
 
         public void EventsAfterOpenFile()
@@ -49,13 +54,24 @@ namespace NinfiaDSToolkit.Tools
                 WeExList.Items.Add(extname[i]);
             }
 
-            //andiListBox1.Items.AddRange(MVGList.GetPokemonNameMVList());
             cb_pkm.Items.Clear();
             pkmname = Database.GetPokemonName(4, 1);
             cb_pkm.Items.AddRange(pkmname);
 
             WeExList.SelectedIndex = 0;
             TabC1.Enabled = true;
+        }
+
+        public void GotFocusF(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
+            }
+            catch(Exception ex)
+            {
+                Program.mForm.toolStripLabel1.Text = "";
+            }
         }
 
         public void WriteCurrentBack_Click(object sender, EventArgs e)
@@ -69,7 +85,6 @@ namespace NinfiaDSToolkit.Tools
 
             try
             {
-                // try to open in write mode
                 dynamicFileByteProvider = new DynamicFileByteProvider(a);
             }
             catch { }
@@ -98,21 +113,14 @@ namespace NinfiaDSToolkit.Tools
                 Program.GlobalPath = Path.GetDirectoryName(path);
                 _LastPath = Path.GetDirectoryName(path);
 
-                FileStream a = new FileStream(path, FileMode.Open);
+                flepath = new FileInfo(path);
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
 
-                a.Position = 0;
-                byte[] bytee = new byte[4];
-
-                a.Read(bytee, 0, 4);
-                string check = System.Text.Encoding.ASCII.GetString(bytee);
-
-                if (check != "NARC")
+                if (Utils.CheckMagicHeaderID.get(path) != "NARC")
                 {
-                    MessageBox.Show("This Not NARC File, File Extension Signature is " + check + ", and is not NARC File!", "Error!");
+                    MessageBox.Show("This Not NARC File, File Extension Signature is " + Utils.CheckMagicHeaderID.get(path) + ", and is not NARC File!", "Error!");
                     return;
                 }
-
-                a.Close();
 
                 narc.OpenData(path);
                 EventsAfterOpenFile();
@@ -126,19 +134,7 @@ namespace NinfiaDSToolkit.Tools
 
         public void LoadCurrentData()
         {
-            int lenghtdata = (int)a.Length / 4;
-            string[] data = new string[lenghtdata];
-
-            for (int i = 0; i < lenghtdata; i++)
-            {
-                byte[] temp = new byte[4];
-                a.Position = i * 4;
-                a.Read(temp, 0, 4);
-                data[i] = pkmname[BitConverter.ToUInt32(temp, 0) - 1];
-            }
-
-            FillGrid.Build(grid1, lenghtdata);
-            FillGrid.Fill(grid1, data);
+            Utils.LoadCurrentData.WildEx4((int) a.Length / 4,grid1,pkmname,a);
         }
         #endregion
 
@@ -204,10 +200,11 @@ namespace NinfiaDSToolkit.Tools
             long angka2 = (long)cb_pkm.SelectedIndex +1;
 
             a.Position = angka * 4;
-            a.Write(NinfiaDSToolkit.Andi.Utils.ByteConverter.ToByte(angka2, 4), 0, 4);
+            a.Write(ByteConverter.ToByte(angka2, 4), 0, 4);
 
             int r = angka + 1;
-            SourceGrid.Cells.Views.Cell view = new SourceGrid.Cells.Views.Cell();
+            
+            Cell view = new Cell();
 
             grid1[r, 1] = new SourceGrid.Cells.Cell(pkmname[angka2-1]);
             grid1[r, 1].View = view;

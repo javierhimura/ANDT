@@ -74,7 +74,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Andi\Controls\ControlExtensions.cs" />
-    <Compile Include="Tools\Internal\FillGrid.cs" />
+    <Compile Include="Andi\Utils\Garc\AndiGarcPacker.cs" />
+    <Compile Include="Andi\Utils\Garc\AndiGarcReader.cs" />
+    <Compile Include="Andi\Utils\Garc\AndiGarcWriter.cs" />
+    <Compile Include="Andi\Utils\Narc\AndiNarcPacker.cs" />
+    <Compile Include="Andi\Utils\Narc\AndiNarcWriter.cs" />
+    <Compile Include="Tools\FillGrid.cs" />
     <Compile Include="Libs\ExpandPanelWinform\AdvancedFlowLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -227,7 +232,33 @@
     </Compile>
     <Compile Include="Andi\Utils\MapList.cs" />
     <Compile Include="Andi\Utils\Narc\AndiNarcReader.cs" />
-    <Compile Include="Andi\Utils\Narc\BLZCoder.cs" />
+    <Compile Include="Andi\Utils\BLZCoder.cs" />
+    <Compile Include="Andi\Utils\NitroROM\AlreadyEditingException.cs" />
+    <Compile Include="Andi\Utils\NitroROM\ByteArrayInputStream.cs" />
+    <Compile Include="Andi\Utils\NitroROM\ByteArrayOutputStream.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\BannerFile.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\Directory.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\ExternalFilesystemSource.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\File.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\FileFilesystemSource.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\Filesystem.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\FilesystemSource.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\FileWithLock.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\HeaderFile.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\InlineFile.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\LZFile.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\NarcFilesystem.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\NetFile.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\NetFilesystem.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\NitroFilesystem.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\NitroROMFilesystem.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\PhysicalFile.cs" />
+    <Compile Include="Andi\Utils\NitroROM\DSFileSystem\PhysicalFilesystem.cs" />
+    <Compile Include="Andi\Utils\NitroROM\LanguageManager.cs" />
+    <Compile Include="Andi\Utils\NitroROM\Overlay.cs" />
+    <Compile Include="Andi\Utils\NitroROM\ROM.cs" />
+    <Compile Include="Andi\Utils\NitroROM\ROMUserInfo.cs" />
+    <Compile Include="Andi\Utils\NitroROM\Settings.Designer.cs" />
     <Compile Include="Andi\Controls\EnumExtensions.cs" />
     <Compile Include="Libs\HexBox\BuiltInContextMenu.cs">
       <SubType>Component</SubType>
@@ -371,10 +402,13 @@
     <Compile Include="Tools\Extra\ovl9tableview.Designer.cs">
       <DependentUpon>ovl9tableview.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Internal\ImageBoxUtilities.cs" />
-    <Compile Include="Tools\Object\ICommonFormLayout.cs" />
-    <Compile Include="Tools\Object\ICommonHiddenGrottoLayout.cs" />
-    <Compile Include="Tools\Object\IGridFormLayout.cs" />
+    <Compile Include="Tools\ImageBoxUtilities.cs" />
+    <Compile Include="Tools\Internal\ICommonFormLayout.cs" />
+    <Compile Include="Tools\Internal\ICommonHiddenGrottoLayout.cs" />
+    <Compile Include="Tools\Internal\IGridFormLayout.cs" />
+    <Compile Include="Tools\Object\AccessChecker.cs" />
+    <Compile Include="Tools\Utils\CheckMagicHeaderID.cs" />
+    <Compile Include="Tools\Utils\LoadCurrentData.cs" />
     <Compile Include="Tools\vEnum.cs" />
     <Compile Include="Tools\vEvolutions.cs">
       <SubType>Form</SubType>
@@ -395,6 +429,12 @@
       <DependentUpon>vHG.cs</DependentUpon>
     </Compile>
     <Compile Include="Andi\Utils\MoveList.cs" />
+    <Compile Include="Tools\Unfinished\vInGameTrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Unfinished\vInGameTrade.Designer.cs">
+      <DependentUpon>vInGameTrade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\vMVSt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,6 +444,12 @@
     <Compile Include="Andi\Utils\ByteConverter.cs" />
     <Compile Include="Andi\Utils\Database.cs" />
     <Compile Include="Andi\Utils\ImageIconHandler.cs" />
+    <Compile Include="Tools\Unfinished\vPWTSB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Unfinished\vPWTSB.Designer.cs">
+      <DependentUpon>vPWTSB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\vWildEx4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -478,8 +524,14 @@
     <EmbeddedResource Include="Tools\vHG.resx">
       <DependentUpon>vHG.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Unfinished\vInGameTrade.resx">
+      <DependentUpon>vInGameTrade.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\vMVSt.resx">
       <DependentUpon>vMVSt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Unfinished\vPWTSB.resx">
+      <DependentUpon>vPWTSB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\vWildEx4.resx">
       <DependentUpon>vWildEx4.cs</DependentUpon>

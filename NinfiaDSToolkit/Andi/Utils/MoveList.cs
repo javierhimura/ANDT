@@ -84,6 +84,24 @@ namespace NinfiaDSToolkit.Andi.Utils
             }
         }
 
+        public static string GetMoveName(int id, int idcountry = 1)
+        {
+            string query = "SELECT a.name FROM moves_name as a WHERE a.country = '"+idcountry+"' AND a.id ='"+id+"'";
+            List<string> a = new List<string>();
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd.Connection = Database.sql_con;
+            cmd.CommandText = query;
+            //Assign the data from urls to dr
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            string b = "";
+            while (dr.Read())
+            {
+                b = dr[0].ToString();
+            }
+
+            return b;
+        }
+
         public static string[] GetMoveList(int gen, int idcountry=1)
         {
             string query = "SELECT a.name FROM moves_name As a WHERE a.country = " + idcountry + " AND a.generation <= " + gen;

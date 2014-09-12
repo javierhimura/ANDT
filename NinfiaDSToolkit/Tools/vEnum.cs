@@ -22,6 +22,11 @@
             HG,SS,
             B,W,
             B2,W2,
+            XY,
+            X,
+            Y,
+            OR,
+            AS,
             none
         }
 

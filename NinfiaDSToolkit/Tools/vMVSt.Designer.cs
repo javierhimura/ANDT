@@ -45,6 +45,7 @@ namespace NinfiaDSToolkit.Tools
             this.label2 = new System.Windows.Forms.ToolStripLabel();
             this.label1 = new System.Windows.Forms.ToolStripLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.IB_pokemon = new NinfiaDSToolkit.Andi.Controls.ImageBox.AndiImageBox();
             this.LB_List = new NinfiaDSToolkit.Andi.Controls.AndiListBox();
             this.mTab1 = new NinfiaDSToolkit.Andi.Controls.TabControl.AndiCustomTabControl();
@@ -56,7 +57,6 @@ namespace NinfiaDSToolkit.Tools
             this.grid1 = new SourceGrid.Grid();
             this.tab_hex = new System.Windows.Forms.TabPage();
             this.hexBox1 = new NinfiaDSToolkit.Andi.Controls.HexBox.HexBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -327,7 +327,7 @@ namespace NinfiaDSToolkit.Tools
             this.hexBox1.Name = "hexBox1";
             this.hexBox1.ReadOnly = true;
             this.hexBox1.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBox1.Size = new System.Drawing.Size(466, 415);
+            this.hexBox1.Size = new System.Drawing.Size(466, 412);
             this.hexBox1.StringViewVisible = true;
             this.hexBox1.TabIndex = 1;
             this.hexBox1.UseFixedBytesPerLine = true;

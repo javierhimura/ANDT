@@ -2,6 +2,7 @@
 using System.IO;
 using System.Windows.Forms;
 using NinfiaDSToolkit.Andi.Controls.HexBox;
+using NinfiaDSToolkit.Andi.Utils;
 using NinfiaDSToolkit.Andi.Utils.Narc;
 using WeifenLuo.WinFormsUI.Docking;
 

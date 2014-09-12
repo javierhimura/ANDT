@@ -7,7 +7,6 @@ using NinfiaDSToolkit.Andi.Controls.HexBox;
 using NinfiaDSToolkit.Andi.Utils;
 using NinfiaDSToolkit.Andi.Utils.Narc;
 using NinfiaDSToolkit.Tools.Internal;
-using NinfiaDSToolkit.Tools.Object;
 using SourceGrid;
 using WeifenLuo.WinFormsUI.Docking;
 
@@ -21,6 +20,7 @@ namespace NinfiaDSToolkit.Tools
         private bool isBabyEvoOpened = false;
         private bool isGridFocus = true;
         private string _LastPath = "";
+        private FileInfo flepath;
 
         Stream _EvolutionStream = new MemoryStream();
         Stream _BabyStream = new MemoryStream();
@@ -38,7 +38,7 @@ namespace NinfiaDSToolkit.Tools
         public vEvolutions()
         {
             InitializeComponent();
-            _LastPath = Program.GlobalPath;
+            
             EventsFormLoad();
         }
 
@@ -46,6 +46,11 @@ namespace NinfiaDSToolkit.Tools
 
         public void EventsFormLoad()
         {
+            _LastPath = Program.GlobalPath;
+            flepath = new FileInfo(_LastPath);
+
+            this.GotFocus += GotFocusF;
+
             toolStripComboBox1.SelectedIndex = 0;
             andiCustomTabControl1.Enabled = false;
             grid1.SelectionMode = GridSelectionMode.Row;
@@ -63,29 +68,23 @@ namespace NinfiaDSToolkit.Tools
             path = AndiFileDialog.OpenDialog(path, Path.GetDirectoryName(_LastPath), "Evolution Narc File - File Open", "Any Files|*.*|Narc Files|*.*");
 
             if (path != "")
+            {
+                flepath = new FileInfo(path);
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
                 path2 = AndiFileDialog.OpenDialog(path2, Path.GetDirectoryName(_LastPath), "BabyEvolution Narc File - File Open", "Any Files|*.*|Narc Files|*.*");
+            }
 
             if (path2 != "")
             {
-                FileStream a = new FileStream(path2, FileMode.Open);
-
-                a.Position = 0;
-                byte[] bytee = new byte[4];
-
-                a.Read(bytee, 0, 4);
-                string check = System.Text.Encoding.ASCII.GetString(bytee);
-
-                if (check != "NARC")
+                if (Utils.CheckMagicHeaderID.get(path2) != "NARC")
                 {
                     MessageBox.Show(
-                        "This Not NARC File, File Extension Signature is " + check + ", and is not NARC File!", "Error!");
+                        "This Not NARC File, File Extension Signature is " + Utils.CheckMagicHeaderID.get(path2) + ", and is not NARC File!", "Error!");
                     isBabyEvoOpened = false;
-                    a.Close();
                     andiImageComboBox4.Enabled = false;
                 }
                 else
                 {
-                    a.Close();
                     andiImageComboBox4.Enabled = true;
                     Narc[1] = new AndiNarcReader();
                     Narc[1].OpenData(path2);
@@ -103,21 +102,12 @@ namespace NinfiaDSToolkit.Tools
                 Program.GlobalPath = Path.GetDirectoryName(path);
                 _LastPath = path;
 
-                FileStream a = new FileStream(path, FileMode.Open);
-
-                a.Position = 0;
-                byte[] bytee = new byte[4];
-
-                a.Read(bytee, 0, 4);
-                string check = System.Text.Encoding.ASCII.GetString(bytee);
-
-                if (check != "NARC")
+                if (Utils.CheckMagicHeaderID.get(path) != "NARC")
                 {
-                    MessageBox.Show("This Not NARC File, File Extension Signature is " + check + ", and is not NARC File!", "Error!");
+                    MessageBox.Show("This Not NARC File, File Extension Signature is " + Utils.CheckMagicHeaderID.get(path) + ", and is not NARC File!", "Error!");
                     return;
                 }
 
-                a.Close();
                 andiCustomTabControl1.Enabled = true;
                 Narc[0] = new AndiNarcReader();
                 Narc[0].OpenData(path);
@@ -191,6 +181,18 @@ namespace NinfiaDSToolkit.Tools
             andiImageComboBox2.Items.AddRange(pkmnamecom);
             andiImageComboBox4.Items.AddRange(pkmnamecom);
             andiListBox1.SelectedIndex = 0;
+        }
+
+        public void GotFocusF(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
+            }
+            catch
+            {
+                Program.mForm.toolStripLabel1.Text = "";
+            }
         }
 
         public void LoadCurrentData()
@@ -278,16 +280,19 @@ namespace NinfiaDSToolkit.Tools
                         case 17:
                         case 18:
                         case 19:
+                            numericUpDown1.Maximum = itemname.Length;
                             andiImageComboBox1.Items.Clear();
                             andiImageComboBox1.Items.AddRange(itemname);
                             numericUpDown1.Enabled = false;
                             break;
                         case 20:
+                            numericUpDown1.Maximum = movename.Length;
                             andiImageComboBox1.Items.Clear();
                             andiImageComboBox1.Items.AddRange(movename);
                             numericUpDown1.Enabled = false;
                             break;
                         case 21:
+                            numericUpDown1.Maximum = pkmname.Length;
                             andiImageComboBox1.Items.Clear();
                             andiImageComboBox1.Items.AddRange(pkmname);
                             numericUpDown1.Enabled = false;
@@ -327,16 +332,19 @@ namespace NinfiaDSToolkit.Tools
                         case 18:
                         case 19:
                         case 20:
+                            numericUpDown1.Maximum = itemname.Length;
                             andiImageComboBox1.Items.Clear();
                             andiImageComboBox1.Items.AddRange(itemname);
                             numericUpDown1.Enabled = false;
                             break;
                         case 21:
+                            numericUpDown1.Maximum = movename.Length;
                             andiImageComboBox1.Items.Clear();
                             andiImageComboBox1.Items.AddRange(movename);
                             numericUpDown1.Enabled = false;
                             break;
                         case 22:
+                            numericUpDown1.Maximum = pkmname.Length;
                             andiImageComboBox1.Items.Clear();
                             andiImageComboBox1.Items.AddRange(pkmname);
                             numericUpDown1.Enabled = false;

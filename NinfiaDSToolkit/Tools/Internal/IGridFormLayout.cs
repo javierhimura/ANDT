@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using SourceGrid;
 
-namespace NinfiaDSToolkit.Tools.Object
+namespace NinfiaDSToolkit.Tools.Internal
 {
     internal interface IGridFormLayout
     {

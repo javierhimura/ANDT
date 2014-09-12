@@ -6,7 +6,7 @@ using NinfiaDSToolkit.Andi.Controls.HexBox;
 using NinfiaDSToolkit.Andi.Controls.ImageBox;
 using NinfiaDSToolkit.Andi.Utils;
 using NinfiaDSToolkit.Andi.Utils.Narc;
-using NinfiaDSToolkit.Tools.Object;
+using NinfiaDSToolkit.Tools.Internal;
 using WeifenLuo.WinFormsUI.Docking;
 
 namespace NinfiaDSToolkit.Tools
@@ -18,11 +18,11 @@ namespace NinfiaDSToolkit.Tools
         public int isLastIndexPokemon = 0;
         public bool isReady = false;
         public string _LastPath = "";
+        private FileInfo flepath;
 
         public vHG()
         {
             InitializeComponent();
-            _LastPath = Program.GlobalPath;
             EventsFormLoad();
             ImageBoxEventLoads();
         }
@@ -36,6 +36,10 @@ namespace NinfiaDSToolkit.Tools
             cb_pokemon.Items.AddRange(Database.GetPokemonName(5));
             cb_locname.Items.AddRange(Database.GetLocationName());
             cb_items.Items.AddRange(Database.GetItemName());
+
+            _LastPath = Program.GlobalPath;
+            flepath = new FileInfo(_LastPath);
+            this.GotFocus += GotFocusF;
 
             cb_pokemon.SelectedIndexChanged += cb_pokemon_SelectedIndexChanged;
             cb_locname.SelectedIndexChanged += cb_locname_SelectedIndexChanged;
@@ -70,19 +74,12 @@ namespace NinfiaDSToolkit.Tools
                     Program.GlobalPath = Path.GetDirectoryName(path);
                     _LastPath = Path.GetDirectoryName(path);
 
-                    FileStream a = new FileStream(path, FileMode.Open);
-                    byte[] bytee = new byte[4];
+                    flepath = new FileInfo(path);
+                    Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
 
-                    a.Position = 0;
-
-                    a.Read(bytee, 0, 4);
-
-                    string check = System.Text.Encoding.ASCII.GetString(bytee);
-                    a.Close();
-
-                    if (check != "NARC")
+                    if (Utils.CheckMagicHeaderID.get(path) != "NARC")
                     {
-                        MessageBox.Show("This Not NARC File, File Extension Signature is " + check + ", and is not NARC File!", "Error!");
+                        MessageBox.Show("This Not NARC File, File Extension Signature is " + Utils.CheckMagicHeaderID.get(path) + ", and is not NARC File!", "Error!");
                         return;
                     }
 
@@ -126,6 +123,18 @@ namespace NinfiaDSToolkit.Tools
             cb_locname.Enabled = true;
             mTab1.Enabled = true;
             bt_Save.Enabled = true;
+        }
+
+        public void GotFocusF(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
+            }
+            catch (Exception ex)
+            {
+                Program.mForm.toolStripLabel1.Text = "";
+            }
         }
 
         public void WriteNarcBack()
@@ -209,10 +218,10 @@ namespace NinfiaDSToolkit.Tools
         {
             try
             {
-                Internal.ImageBoxUtilities.ImageBoxLoadEvent(IB_Pokemon_Click, pkm_1, pkm_2, pkm_3, pkm_4, pkm_5, pkm_6, pkm_7,
+                ImageBoxUtilities.ImageBoxLoadEvent(IB_Pokemon_Click, pkm_1, pkm_2, pkm_3, pkm_4, pkm_5, pkm_6, pkm_7,
                     pkm_8, pkm_9, pkm_10, pkm_11, pkm_12);
 
-                Internal.ImageBoxUtilities.ImageBoxLoadEvent(IB_Items_Click, item_1, item_2, item_3, item_4, item_5, item_6, item_7, item_8,
+                ImageBoxUtilities.ImageBoxLoadEvent(IB_Items_Click, item_1, item_2, item_3, item_4, item_5, item_6, item_7, item_8,
                     item_9, item_10, item_11, item_12, item_13, item_14, item_15, item_16, item_17, item_18,
                     item_19, item_20, item_21, item_22, item_23, item_24, item_25, item_26, item_27, item_28,
                     item_29, item_30, item_31, item_32);
@@ -581,7 +590,7 @@ namespace NinfiaDSToolkit.Tools
             {
                 txt_itemid.Text = ((AndiImageBox)sender).IndexParent + "";
 
-                Internal.ImageBoxUtilities.ImageBoxGridColor(Color.Gainsboro, item_1, item_2, item_3, item_4, item_5, item_6, item_7, item_8,
+                ImageBoxUtilities.ImageBoxGridColor(Color.Gainsboro, item_1, item_2, item_3, item_4, item_5, item_6, item_7, item_8,
                     item_9, item_10, item_11, item_12, item_13, item_14, item_15, item_16, item_17, item_18,
                     item_19, item_20, item_21, item_22, item_23, item_24, item_25, item_26, item_27, item_28,
                     item_29, item_30, item_31, item_32);
@@ -602,7 +611,7 @@ namespace NinfiaDSToolkit.Tools
         {
             isReady = false;
 
-            Internal.ImageBoxUtilities.ImageBoxGridColor(Color.Gainsboro, pkm_1, pkm_2, pkm_3, pkm_4, pkm_5, pkm_6, pkm_7,
+            ImageBoxUtilities.ImageBoxGridColor(Color.Gainsboro, pkm_1, pkm_2, pkm_3, pkm_4, pkm_5, pkm_6, pkm_7,
                 pkm_8, pkm_9, pkm_10, pkm_11, pkm_12);
 
             ((AndiImageBox)sender).GridColor = Color.CadetBlue;

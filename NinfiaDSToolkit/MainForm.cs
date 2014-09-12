@@ -4,27 +4,51 @@ using System.Windows.Forms;
 //using NinfiaDSToolkit.Andi.Utils.NitroROM.DSFileSystem;
 using NinfiaDSToolkit.Tools;
 using NinfiaDSToolkit.Tools.Extra;
-//using NinfiaDSToolkit.Tools.Unfinished;
+using NinfiaDSToolkit.Tools.Unfinished;
 using WeifenLuo.WinFormsUI.Docking;
 
 namespace NinfiaDSToolkit
 {
     public partial class MainForm : Form
     {
-        //public static NitroROMFilesystem fsrom;
-        public bool check = false;
+        // public static NitroROMFilesystem fsrom;
+        // public bool check = false;
+        // public string foolpath = "";
 
         public MainForm()
         {
             InitializeComponent();
-
-            btn_exit.Click += btn_exit_Click;
-            btn_showhome.Click += btn_showhome_Click;
-            btn_open_hgrotto.Click += btn_open_hgrotto_Click;
-            this.Text = ProductName +" " + ProductVersion;
-
+            Event();
             loadCPUVer();
-            //loadHomePage();
+            
+            this.Text= ProductName +" " + ProductVersion;
+        }
+
+        #region Main Events
+        public void Event()
+        {
+            panel_dock1.ActiveContentChanged += (ActiveContentChanged);
+
+            mExit.Click += MExitClick;
+            mHomeDS.Click += ShowMHomeClick;
+            mHGH.Click += ShowMHidenGrotto;
+            mAbout.Click += ShowMAboutClick;
+
+            mInformation.Click += ShowMInformationClick;
+            mLinkGithub.Click += LinkMLinkGithubClick;
+            mLinkBitbucket.Click += LinkMLinkBitbucketClick;
+            mLinkPP.Click += LinkPokemonProject_Click;
+            mRestart.Click += FunctMRestartClick;
+
+            mWildEn4.Click += ShowMWildEx4Click;
+            mMoveset.Click += ShowMoveEditor_Click;
+            mExperience.Click += ShowMExperienceClick;
+            mEvolution.Click += ShowMEvolutionEditorClick;
+            mInGameTrade.Click += ShowIngameTrade_Click;
+
+            mTestNarc.Click += ToolTestMTestNarcClick;
+            mTestBLZ.Click += ToolTestBLZ_Click;
+            mTestOva9.Click += ToolTestOvaTable_Click;
         }
 
         private void ActiveContentChanged(object sender, EventArgs e)
@@ -94,97 +118,95 @@ namespace NinfiaDSToolkit
                 sbp_1.Text = "x32";
             }
         }
+        #endregion
 
-        void btn_exit_Click(object sender, EventArgs e)
+        #region MenuClick
+        void MExitClick(object sender, EventArgs e)
         {
             Application.ExitThread();
         }
 
-        private void menuItem16_Click(object sender, EventArgs e)
+        private void FunctMRestartClick(object sender, EventArgs e)
         {
             Application.Restart();
         }
 
-        private void menuItem12_Click(object sender, EventArgs e)
-        {
-            Process.Start("https://github.com/andibadra/ninfia.document/wiki");
-        }
-
-        void btn_showhome_Click(object sender, EventArgs e)
+        void ShowMHomeClick(object sender, EventArgs e)
         {
 
         }
 
-        void btn_open_hgrotto_Click(object sender, EventArgs e)
+        void ShowMHidenGrotto(object sender, EventArgs e)
         {
             loadDockForms(new vHG(), "HiddenGrotto Editor");
         }
 
-        private void menuItem11_Click(object sender, EventArgs e)
+        private void ShowMoveEditor_Click(object sender, EventArgs e)
         {
             loadDockForms(new vMVSt(), "Moveset Editor");
         }
 
-        private void menuItem15_Click(object sender, EventArgs e)
+        private void ShowMExperienceClick(object sender, EventArgs e)
         {
             loadDockForms(new vExperience(), "Experience Editor");
         }
 
-        private void menuItem24_Click(object sender, EventArgs e)
+        private void ShowMInformationClick(object sender, EventArgs e)
         {
             loadDockForms(new Information(), "Information");
         }
 
-        private void menuItem19_Click(object sender, EventArgs e)
+        private void ShowMWildEx4Click(object sender, EventArgs e)
         {
             loadDockForms(new vWildEx4(), "WildEncounterEx gen4 Editor");
         }
 
-        private void menuItem17_Click(object sender, EventArgs e)
+        private void ShowMEvolutionEditorClick(object sender, EventArgs e)
         {
             loadDockForms(new vEvolutions(), "Evolution Editor");
         }
 
-        private void btn_showhome_Click_1(object sender, EventArgs e)
+        private void ShowMAboutClick(object sender, EventArgs e)
         {
             About a = new About();
 
             a.ShowDialog(this);
         }
 
-        private void menuItem21_Click(object sender, EventArgs e)
+        private void ToolTestBLZ_Click(object sender, EventArgs e)
         {
             loadDockForms(new BLZCoderUI(), "BLZCoder Test");
         }
 
-        private void menuItem9_Click(object sender, EventArgs e)
+        private void ToolTestMTestNarcClick(object sender, EventArgs e)
         {
-            loadDockForms(new NarcExplorer(), "NARC Viewer");
+            loadDockForms(new NarcExplorer(), "GARC Viewer");
         }
 
-        private void menuItem6_Click(object sender, EventArgs e)
+        private void ToolTestOvaTable_Click(object sender, EventArgs e)
         {
             loadDockForms(new ovl9tableview(), "Overlay9 Table Viewer");
         }
 
-        private void menuItem7_Click(object sender, EventArgs e)
+        private void ShowIngameTrade_Click(object sender, EventArgs e)
         {
-            //loadDockForms(new vInGameTrade(), "In-Game Trade Editor");
+            loadDockForms(new vInGameTrade(), "In-Game Trade Editor");
         }
 
-        private void menuItem8_Click(object sender, EventArgs e)
+        private void LinkPokemonProject_Click(object sender, EventArgs e)
         {
             Process.Start("http://projectpokemon.org/forums/showthread.php?26663-Andi-Pok%E9mon-Black-amp-White-Tools");
         }
 
-        private void menuItem14_Click(object sender, EventArgs e)
+        private void LinkMLinkBitbucketClick(object sender, EventArgs e)
         {
             Process.Start("https://bitbucket.org/andibadra/");
         }
 
-        private void menuItem10_Click(object sender, EventArgs e)
+        private void LinkMLinkGithubClick(object sender, EventArgs e)
         {
             Process.Start("https://github.com/andibadra");
         }
+        #endregion
     }
 }

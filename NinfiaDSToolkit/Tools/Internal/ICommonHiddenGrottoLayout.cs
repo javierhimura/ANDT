@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using NinfiaDSToolkit.Andi.Controls.ImageBox;
+﻿using NinfiaDSToolkit.Andi.Controls.ImageBox;
 
-namespace NinfiaDSToolkit.Tools.Object
+namespace NinfiaDSToolkit.Tools.Internal
 {
     internal interface ICommonHiddenGrottoLayout
     {

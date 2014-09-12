@@ -6,7 +6,6 @@ using NinfiaDSToolkit.Andi.Controls.HexBox;
 using NinfiaDSToolkit.Andi.Utils;
 using NinfiaDSToolkit.Andi.Utils.Narc;
 using NinfiaDSToolkit.Tools.Internal;
-using NinfiaDSToolkit.Tools.Object;
 using SourceGrid;
 using WeifenLuo.WinFormsUI.Docking;
 
@@ -15,16 +14,24 @@ namespace NinfiaDSToolkit.Tools
     public partial class vMVSt : DockContent, ICommonFormLayout, IGridFormLayout
     {
         AndiNarcReader narc = new AndiNarcReader();
+
+        List<MoveList> mvlist = new List<MoveList>(); 
         List<MapList> mapfile = new List<MapList>(); 
         Stream a = new MemoryStream();
+
         vEnum.GameVer b = vEnum.GameVer.none;
         vEnum.GameFormat c = vEnum.GameFormat.none;
-        List<MoveList> mvlist = new List<MoveList>(); 
-        int gameid = 0;
-        private bool checkgridfocus = true;
+
+        private int gameid = 0;
         private int indexlist = 0;
         private int movelist = 0;
+
+        private bool checkgridfocus = true;
+        private bool isGen6 = false;
+
         private string _LastPath = "";
+
+        private FileInfo flepath;
 
         public vMVSt()
         {
@@ -37,21 +44,38 @@ namespace NinfiaDSToolkit.Tools
         {
             mTab1.Enabled = false;
             cb_ver.SelectedIndex = 0;
+
             grid1.SelectionMode = GridSelectionMode.Row;
             grid1.Selection.EnableMultiSelection = false;
             grid1.MouseClick += BaseGridSelection_SelectionChanged;
             grid1.KeyDown += BaseGridSelection_SelectionChanged;
             grid1.KeyUp += BaseGridSelection_SelectionChanged;
             grid1.Selection.FocusRowEntered += BaseGridSelection_FocusRowEntered;
-            _LastPath = Program.GlobalPath;
 
-            this.bt_Open.Click += new System.EventHandler(this.OpenFile_Click);
-            this.bt_Save.Click += new System.EventHandler(this.SaveFile_Click); 
-            this.LB_List.SelectedIndexChanged += new System.EventHandler(this.LB_List_SelectedIndexChanged);
-            this.bt_remove.Click += new System.EventHandler(this.bt_Remove_Click);
-            this.bt_add.Click += new System.EventHandler(this.bt_Add_Click);
-            this.nm_lv.ValueChanged += new System.EventHandler(this.nm_lv_ValueChanged);
-            this.cb_pokemon.SelectedIndexChanged += new System.EventHandler(this.cb_Pokemon_SelectedIndexChanged);
+            _LastPath = Program.GlobalPath;
+            flepath = new FileInfo(_LastPath);
+
+            GotFocus += GotFocusF;
+
+            bt_Open.Click += (OpenFile_Click);
+            bt_Save.Click += (SaveFile_Click); 
+            LB_List.SelectedIndexChanged += (LB_List_SelectedIndexChanged);
+            bt_remove.Click += (bt_Remove_Click);
+            bt_add.Click += (bt_Add_Click);
+            nm_lv.ValueChanged += (nm_lv_ValueChanged);
+            cb_pokemon.SelectedIndexChanged += (cb_Pokemon_SelectedIndexChanged);
+        }
+
+        public void GotFocusF(object sender, EventArgs e)
+        {
+            try
+            {
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
+            }
+            catch
+            {
+                Program.mForm.toolStripLabel1.Text = "";
+            }
         }
 
         public void OpenFile_Click(object sender, EventArgs e)
@@ -65,23 +89,32 @@ namespace NinfiaDSToolkit.Tools
                 Program.GlobalPath = Path.GetDirectoryName(path);
                 _LastPath = Path.GetDirectoryName(path);
 
-                FileStream a = new FileStream(path, FileMode.Open);
+                flepath = new FileInfo(path);
+                Program.mForm.toolStripLabel1.Text = flepath.Name + " (" + flepath.Length + ")";
 
-                a.Position = 0;
-                byte[] bytee = new byte[4];
-
-                a.Read(bytee, 0, 4);
-                string check = System.Text.Encoding.ASCII.GetString(bytee);
-
-                if (check != "NARC")
+                if (Utils.CheckMagicHeaderID.get(path) == "NARC")
                 {
-                    MessageBox.Show("This Not NARC File, File Extension Signature is " + check + ", and is not NARC File!", "Error!");
+                    isGen6 = false;
+                }
+                else if (Utils.CheckMagicHeaderID.get(path) == "GARC")
+                {
+                    isGen6 = true;
+                }
+                else
+                {
+                    MessageBox.Show("This Not NARC File, File Extension Signature is " + Utils.CheckMagicHeaderID.get(path) + ", and is not NARC/GARC File!", "Error!");
                     return;
                 }
 
-                a.Close();
+                if (isGen6)
+                {
 
-                narc.OpenData(path);
+                }
+                else
+                {
+                    narc.OpenData(path);
+                }
+                
                 EventsAfterOpenFile();
             }
         }
@@ -102,79 +135,40 @@ namespace NinfiaDSToolkit.Tools
         {
             if (cb_ver.SelectedIndex == 0)
             {
-                if (narc.FileCount == 668)
+                int cubindex = 0;
+
+                if (isGen6)
                 {
-                    b = vEnum.GameVer.BW;
-                    c = vEnum.GameFormat.gen5;
-                    gameid = 17;
-                    label1.Text = "BW";
-                }
-                else if (narc.FileCount == 709)
-                {
-                    b = vEnum.GameVer.BW2;
-                    c = vEnum.GameFormat.gen5;
-                    gameid = 21;
-                    label1.Text = "BW2";
-                }
-                else if (narc.FileCount == 501)
-                {
-                    b = vEnum.GameVer.DP;
-                    c = vEnum.GameFormat.gen4;
-                    gameid = 12;
-                    label1.Text = "DP";
-                }
-                else if (narc.FileCount == 508)
-                {
-                    b = vEnum.GameVer.PtHGSS;
-                    c = vEnum.GameFormat.gen4;
-                    gameid = 14;
-                    label1.Text = "Pt/HGSS";
+                    cubindex = 5;
                 }
                 else
                 {
-                    return;
+                    int narccount = narc.FileCount;
+                    cubindex = Utils.LoadCurrentData.FindGameIdFromCount(narccount);
                 }
-            }
-            else if (cb_ver.SelectedIndex == 1)
-            {
-                b = vEnum.GameVer.DP;
-                c = vEnum.GameFormat.gen4;
-                gameid = 12;
-                label1.Text = "DP";
-            }
-            else if (cb_ver.SelectedIndex == 2)
-            {
-                b = vEnum.GameVer.PtHGSS;
-                c = vEnum.GameFormat.gen4;
-                gameid = 14;
-                label1.Text = "Pt/HGSS";
-            }
-            else if (cb_ver.SelectedIndex == 3)
-            {
-                b = vEnum.GameVer.BW;
-                c = vEnum.GameFormat.gen5;
-                label1.Text = "BW";
-                gameid = 17;
-            }
-            else if (cb_ver.SelectedIndex == 4)
-            {
-                b = vEnum.GameVer.BW2;
-                c = vEnum.GameFormat.gen5;
-                gameid = 21;
-                label1.Text = "BW2";
 
+                b = Utils.LoadCurrentData.FindGameVersion(cubindex);
+                c = Utils.LoadCurrentData.FindGameFormat(cubindex);
+                gameid = Utils.LoadCurrentData.FindGameId(cubindex);
+                label1.Text = Utils.LoadCurrentData.FindLabelGame(cubindex);
             }
             else
             {
-                return;
+                b = Utils.LoadCurrentData.FindGameVersion(cb_ver.SelectedIndex);
+                c = Utils.LoadCurrentData.FindGameFormat(cb_ver.SelectedIndex);
+                gameid = Utils.LoadCurrentData.FindGameId(cb_ver.SelectedIndex);
+                label1.Text = Utils.LoadCurrentData.FindLabelGame(cb_ver.SelectedIndex);
             }
 
             MVGList.Load(gameid);
-            LB_List.Items.Clear();
             mapfile.Clear();
+
+            LB_List.Items.Clear();
             LB_List.Items.AddRange(MVGList.GetPokemonNameMVList());
+
             cb_pokemon.Items.Clear();
             cb_pokemon.Items.AddRange(MVGList.movelist.ToArray());
+
             mTab1.Enabled = true;
             LB_List.SelectedIndex = 0;
         }
@@ -183,12 +177,19 @@ namespace NinfiaDSToolkit.Tools
         {
             try
             {
-                byte[] temp = new byte[a.Length];
+                if (isGen6)
+                {
 
-                a.Position = 0;
-                a.Read(temp, 0, (int)a.Length);
+                }
+                else
+                {
+                    byte[] temp = new byte[a.Length];
 
-                narc.ReplaceEntry(LB_List.SelectedIndex, temp.Length, temp);
+                    a.Position = 0;
+                    a.Read(temp, 0, (int)a.Length);
+
+                    narc.ReplaceEntry(LB_List.SelectedIndex, temp.Length, temp);
+                }
             }
             catch (Exception ex)
             {
@@ -246,10 +247,9 @@ namespace NinfiaDSToolkit.Tools
                             nik3 = ByteConverter.ToByte(0, 2);
                             a.Write(nik3, 0, 2);
                         }
-                        // ? bConvert(
-
                         break;
                     case vEnum.GameFormat.gen5:
+                    case vEnum.GameFormat.gen6:
                         ukuran = (count1 + 1) * 4;
 
                         tempbytenya = new byte[ukuran];
@@ -271,7 +271,6 @@ namespace NinfiaDSToolkit.Tools
                         a.Position = 4 * count1 + 2;
                         nik2 = ByteConverter.ToByte(65535, 2);
                         a.Write(nik2, 0, 2);
-
                         break;
                 }
             }
@@ -279,8 +278,6 @@ namespace NinfiaDSToolkit.Tools
             {
                 Database.InsertReader.InsertLogs("Error", "Yellow", ex);
             }
-
-            //a = new MemoryStream(narc.getdataselected(andiListBox1.SelectedIndex));
         }
 
         public void LoadCurrentData()
@@ -299,7 +296,6 @@ namespace NinfiaDSToolkit.Tools
 
             try
             {
-                // try to open in write mode
                 dynamicFileByteProvider = new DynamicFileByteProvider(a);
             }
             catch { }
@@ -546,9 +542,16 @@ namespace NinfiaDSToolkit.Tools
         {
             try
             {
-                a = new MemoryStream(narc.getdataselected(LB_List.SelectedIndex));
-                checkgridfocus = false;
-                label5.Text = LB_List.SelectedIndex + "/" + narc.FileCount;
+                if (isGen6)
+                {
+
+                }
+                else
+                {
+                    a = new MemoryStream(narc.getdataselected(LB_List.SelectedIndex));
+                    checkgridfocus = false;
+                    label5.Text = LB_List.SelectedIndex + "/" + narc.FileCount;
+                }
 
                 if (LB_List.SelectedIndex <= 649)
                 {
@@ -654,9 +657,6 @@ namespace NinfiaDSToolkit.Tools
             try
             {
                 int index = indexlist;
-
-                //this.toolTip1.SetToolTip(this.cb_pokemon, cb_pokemon.Text + "\n" + MVGList.getFlavor(cb_pokemon.SelectedIndex + 1, gameid));
-
                 ChangeMovesSelected(index, cb_pokemon.SelectedIndex + 1, (int)nm_lv.Value);
             }
             catch (Exception ex)

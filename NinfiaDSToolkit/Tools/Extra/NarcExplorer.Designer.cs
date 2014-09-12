@@ -38,8 +38,10 @@ namespace NinfiaDSToolkit.Tools.Extra
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.andiListBox1 = new AndiListBox();
-            this.hexBox1 = new HexBox();
+            this.andiListBox1 = new NinfiaDSToolkit.Andi.Controls.AndiListBox();
+            this.hexBox1 = new NinfiaDSToolkit.Andi.Controls.HexBox.HexBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,23 +120,46 @@ namespace NinfiaDSToolkit.Tools.Extra
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hexBox1.ColumnInfoVisible = true;
             this.hexBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.hexBox1.HexCasing = HexCasing.Lower;
+            this.hexBox1.HexCasing = NinfiaDSToolkit.Andi.Controls.HexBox.HexCasing.Lower;
             this.hexBox1.LineInfoVisible = true;
             this.hexBox1.Location = new System.Drawing.Point(154, 28);
             this.hexBox1.Name = "hexBox1";
             this.hexBox1.ReadOnly = true;
             this.hexBox1.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBox1.Size = new System.Drawing.Size(335, 395);
+            this.hexBox1.Size = new System.Drawing.Size(335, 220);
             this.hexBox1.StringViewVisible = true;
             this.hexBox1.TabIndex = 2;
             this.hexBox1.UseFixedBytesPerLine = true;
             this.hexBox1.VScrollBarVisible = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(155, 406);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(154, 254);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox1.Size = new System.Drawing.Size(335, 149);
+            this.textBox1.TabIndex = 4;
             // 
             // NarcExplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 426);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.hexBox1);
             this.Controls.Add(this.andiListBox1);
             this.Controls.Add(this.toolStrip1);
@@ -158,5 +183,7 @@ namespace NinfiaDSToolkit.Tools.Extra
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private AndiListBox andiListBox1;
         private HexBox hexBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

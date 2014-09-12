@@ -56,7 +56,6 @@
             this.andiImageComboBox4 = new NinfiaDSToolkit.Andi.Controls.AndiImageComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.andiImageComboBox9 = new NinfiaDSToolkit.Andi.Controls.AndiImageComboBox();
             this.hexBox1 = new NinfiaDSToolkit.Andi.Controls.HexBox.HexBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -269,6 +268,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.andiImageComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.andiImageComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.andiImageComboBox3.DropDownWidth = 500;
             this.andiImageComboBox3.FormattingEnabled = true;
             this.andiImageComboBox3.ItemHeight = 17;
             this.andiImageComboBox3.Location = new System.Drawing.Point(93, 19);
@@ -395,7 +395,6 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.tabPage2.Controls.Add(this.andiImageComboBox9);
             this.tabPage2.Controls.Add(this.hexBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 21);
             this.tabPage2.Name = "tabPage2";
@@ -403,15 +402,6 @@
             this.tabPage2.Size = new System.Drawing.Size(481, 402);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "HEX";
-            // 
-            // andiImageComboBox9
-            // 
-            this.andiImageComboBox9.FormattingEnabled = true;
-            this.andiImageComboBox9.ItemHeight = 17;
-            this.andiImageComboBox9.Location = new System.Drawing.Point(6, 8);
-            this.andiImageComboBox9.Name = "andiImageComboBox9";
-            this.andiImageComboBox9.Size = new System.Drawing.Size(181, 23);
-            this.andiImageComboBox9.TabIndex = 2;
             // 
             // hexBox1
             // 
@@ -422,11 +412,11 @@
             this.hexBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.hexBox1.HexCasing = NinfiaDSToolkit.Andi.Controls.HexBox.HexCasing.Lower;
             this.hexBox1.LineInfoVisible = true;
-            this.hexBox1.Location = new System.Drawing.Point(3, 37);
+            this.hexBox1.Location = new System.Drawing.Point(2, 3);
             this.hexBox1.Name = "hexBox1";
             this.hexBox1.ReadOnly = true;
             this.hexBox1.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBox1.Size = new System.Drawing.Size(487, 362);
+            this.hexBox1.Size = new System.Drawing.Size(475, 396);
             this.hexBox1.StringViewVisible = true;
             this.hexBox1.TabIndex = 1;
             this.hexBox1.UseFixedBytesPerLine = true;
@@ -492,6 +482,5 @@
         private Andi.Controls.AndiGroupBox andiGroupBox1;
         private Andi.Controls.ImageBox.AndiImageBox andiImageBox1;
         private Andi.Controls.ImageBox.AndiImageBox pkm_1;
-        private Andi.Controls.AndiImageComboBox andiImageComboBox9;
     }
 }
