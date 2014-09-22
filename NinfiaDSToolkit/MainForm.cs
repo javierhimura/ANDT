@@ -1,13 +1,15 @@
-﻿using System;
+﻿//using NinfiaDSToolkit.Andi.Utils.NitroROM.DSFileSystem;
+using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-//using NinfiaDSToolkit.Andi.Utils.NitroROM.DSFileSystem;
-using NinfiaDSToolkit.Tools;
-using NinfiaDSToolkit.Tools.Extra;
-using NinfiaDSToolkit.Tools.Unfinished;
+using Andi.Toolkit.gen0;
+using Andi.Toolkit.gen4;
+using Andi.Toolkit.gen5;
+using Andi.Toolkit.utils;
+using Andi.Toolkit._un;
 using WeifenLuo.WinFormsUI.Docking;
 
-namespace NinfiaDSToolkit
+namespace Andi.Toolkit
 {
     public partial class MainForm : Form
     {
@@ -35,20 +37,20 @@ namespace NinfiaDSToolkit
             mAbout.Click += ShowMAboutClick;
 
             mInformation.Click += ShowMInformationClick;
-            mLinkGithub.Click += LinkMLinkGithubClick;
-            mLinkBitbucket.Click += LinkMLinkBitbucketClick;
-            mLinkPP.Click += LinkPokemonProject_Click;
+            // mLinkGithub.Click += LinkMLinkGithubClick;
+            // mLinkBitbucket.Click += LinkMLinkBitbucketClick;
+            // mLinkPP.Click += LinkPokemonProject_Click;
             mRestart.Click += FunctMRestartClick;
 
             mWildEn4.Click += ShowMWildEx4Click;
             mMoveset.Click += ShowMoveEditor_Click;
             mExperience.Click += ShowMExperienceClick;
             mEvolution.Click += ShowMEvolutionEditorClick;
-            mInGameTrade.Click += ShowIngameTrade_Click;
+            // mInGameTrade.Click += ShowIngameTrade_Click;
 
-            mTestNarc.Click += ToolTestMTestNarcClick;
-            mTestBLZ.Click += ToolTestBLZ_Click;
-            mTestOva9.Click += ToolTestOvaTable_Click;
+            // mTestNarc.Click += ToolTestMTestNarcClick;
+            // mTestBLZ.Click += ToolTestBLZ_Click;
+            // mTestOva9.Click += ToolTestOvaTable_Click;
         }
 
         private void ActiveContentChanged(object sender, EventArgs e)
@@ -111,11 +113,11 @@ namespace NinfiaDSToolkit
         {
             if (Environment.Is64BitOperatingSystem)
             {
-                sbp_1.Text = "x64";
+                // sbp_1.Text = "x64";
             }
             else
             {
-                sbp_1.Text = "x32";
+                // sbp_1.Text = "x32";
             }
         }
         #endregion

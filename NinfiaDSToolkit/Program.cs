@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using NinfiaDSToolkit.Andi.Controls;
-using NinfiaDSToolkit.Andi.Utils;
+using Andi.Libs;
+using Andi.Toolkit.utils.Object;
+using Andi.Utils.Database;
+using Andi.Utils.Renderer;
 
-namespace NinfiaDSToolkit
+namespace Andi.Toolkit
 {
     static class Program
     {
@@ -20,11 +22,11 @@ namespace NinfiaDSToolkit
 
             GlobalPath = Application.StartupPath;
 
-            if (Tools.Object.AccessChecker.WriteAccess(Application.StartupPath))
+            if (AccessChecker.WriteAccess(Application.StartupPath))
             {
                 mForm = new MainForm();
                 Database.Connect();
-                ToolStripManager.Renderer = new VS2012LightRenderer();
+                Theme.setTheme(1);
                 Application.Run(mForm);
             }
             else
