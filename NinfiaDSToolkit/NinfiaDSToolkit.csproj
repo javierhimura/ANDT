@@ -41,46 +41,53 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking">
       <HintPath>..\..\..\..\build\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="utils\FillGrid.cs" />
-    <Compile Include="utils\About.cs">
+    <Compile Include="utils2\BCSARUnpacker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="utils\About.Designer.cs">
+    <Compile Include="utils2\BCSARUnpacker.Designer.cs">
+      <DependentUpon>BCSARUnpacker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utils\FillGrid.cs" />
+    <Compile Include="utils2\Main\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="utils2\Main\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="utils\BLZCoderUI.cs">
+    <Compile Include="utils2\BLZCoderUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="utils\BLZCoderUI.Designer.cs">
+    <Compile Include="utils2\BLZCoderUI.Designer.cs">
       <DependentUpon>BLZCoderUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="utils\Information.cs">
+    <Compile Include="utils2\Main\Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="utils\Information.Designer.cs">
+    <Compile Include="utils2\Main\Information.Designer.cs">
       <DependentUpon>Information.cs</DependentUpon>
     </Compile>
-    <Compile Include="utils\Options.cs">
+    <Compile Include="utils2\Main\Options.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="utils\Options.Designer.cs">
+    <Compile Include="utils2\Main\Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
     </Compile>
-    <Compile Include="utils\NarcExplorer.cs">
+    <Compile Include="utils2\Arc\NarcExplorer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="utils\NarcExplorer.Designer.cs">
+    <Compile Include="utils2\Arc\NarcExplorer.Designer.cs">
       <DependentUpon>NarcExplorer.cs</DependentUpon>
     </Compile>
-    <Compile Include="utils\ovl9tableview.cs">
+    <Compile Include="utils2\ovl9tableview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="utils\ovl9tableview.Designer.cs">
+    <Compile Include="utils2\ovl9tableview.Designer.cs">
       <DependentUpon>ovl9tableview.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\ImageBoxUtilities.cs" />
@@ -141,22 +148,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="utils\About.resx">
+    <EmbeddedResource Include="utils2\BCSARUnpacker.resx">
+      <DependentUpon>BCSARUnpacker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="utils2\Main\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="utils\BLZCoderUI.resx">
+    <EmbeddedResource Include="utils2\BLZCoderUI.resx">
       <DependentUpon>BLZCoderUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="utils\Information.resx">
+    <EmbeddedResource Include="utils2\Main\Information.resx">
       <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="utils\NarcExplorer.resx">
+    <EmbeddedResource Include="utils2\Arc\NarcExplorer.resx">
       <DependentUpon>NarcExplorer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="utils\Options.resx">
+    <EmbeddedResource Include="utils2\Main\Options.resx">
       <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="utils\ovl9tableview.resx">
+    <EmbeddedResource Include="utils2\ovl9tableview.resx">
       <DependentUpon>ovl9tableview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gen0\vEvolutions.resx">

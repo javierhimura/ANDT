@@ -1,0 +1,12 @@
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\bin\Debug\Andi.Libs.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\bin\Debug\Andi.Libs.pdb
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.csprojResolveAssemblyReference.cache
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.FastColoredTextBox.FastColoredTextBox.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.FastColoredTextBox.FindForm.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.FastColoredTextBox.GoToForm.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.FastColoredTextBox.HotkeysEditorForm.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.FastColoredTextBox.ReplaceForm.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.HexBox.HexBox.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.csproj.GenerateResource.Cache
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Libs\obj\Debug\Andi.Libs.pdb

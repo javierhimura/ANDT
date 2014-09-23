@@ -47,15 +47,15 @@ namespace Andi.Toolkit.gen5
             this.cb_locname = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.mTab1 = new AndiCustomTabControl();
+            this.mTab1 = new Andi.Controls.TabControl.AndiCustomTabControl();
             this.tb_pokemon = new System.Windows.Forms.TabPage();
-            this.andiGroupBox1 = new AndiGroupBox();
+            this.andiGroupBox1 = new Andi.Controls.AndiGroupBox();
             this.cb_forme = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cb_prev_pokemon = new AndiImageBox();
+            this.cb_prev_pokemon = new Andi.Controls.ImageBox.AndiImageBox();
             this.txt_pkmid = new System.Windows.Forms.TextBox();
-            this.cb_pokemon = new AndiImageComboBox();
+            this.cb_pokemon = new Andi.Controls.AndiImageComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,61 +63,61 @@ namespace Andi.Toolkit.gen5
             this.nm_lv_min = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.nm_lv_max = new System.Windows.Forms.NumericUpDown();
-            this.pkm_11 = new AndiImageBox();
-            this.pkm_12 = new AndiImageBox();
-            this.pkm_10 = new AndiImageBox();
-            this.pkm_9 = new AndiImageBox();
-            this.pkm_7 = new AndiImageBox();
-            this.pkm_8 = new AndiImageBox();
-            this.pkm_6 = new AndiImageBox();
-            this.pkm_5 = new AndiImageBox();
-            this.pkm_3 = new AndiImageBox();
-            this.pkm_4 = new AndiImageBox();
-            this.pkm_2 = new AndiImageBox();
-            this.pkm_1 = new AndiImageBox();
+            this.pkm_11 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_12 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_10 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_9 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_7 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_8 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_6 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_5 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_3 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_4 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_2 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.pkm_1 = new Andi.Controls.ImageBox.AndiImageBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cb_vergm = new System.Windows.Forms.ComboBox();
             this.tb_items = new System.Windows.Forms.TabPage();
             this.txt_itemid = new System.Windows.Forms.TextBox();
-            this.andiGroupBox3 = new AndiGroupBox();
-            this.item_17 = new AndiImageBox();
-            this.item_18 = new AndiImageBox();
-            this.item_20 = new AndiImageBox();
-            this.item_19 = new AndiImageBox();
-            this.item_31 = new AndiImageBox();
-            this.item_21 = new AndiImageBox();
-            this.item_32 = new AndiImageBox();
-            this.item_22 = new AndiImageBox();
-            this.item_30 = new AndiImageBox();
-            this.item_24 = new AndiImageBox();
-            this.item_29 = new AndiImageBox();
-            this.item_23 = new AndiImageBox();
-            this.item_27 = new AndiImageBox();
-            this.item_25 = new AndiImageBox();
-            this.item_28 = new AndiImageBox();
-            this.item_26 = new AndiImageBox();
-            this.andiGroupBox2 = new AndiGroupBox();
-            this.item_1 = new AndiImageBox();
-            this.item_2 = new AndiImageBox();
-            this.item_4 = new AndiImageBox();
-            this.item_3 = new AndiImageBox();
-            this.item_15 = new AndiImageBox();
-            this.item_5 = new AndiImageBox();
-            this.item_16 = new AndiImageBox();
-            this.item_6 = new AndiImageBox();
-            this.item_14 = new AndiImageBox();
-            this.item_8 = new AndiImageBox();
-            this.item_13 = new AndiImageBox();
-            this.item_7 = new AndiImageBox();
-            this.item_11 = new AndiImageBox();
-            this.item_9 = new AndiImageBox();
-            this.item_12 = new AndiImageBox();
-            this.item_10 = new AndiImageBox();
-            this.andiImageBox2 = new AndiImageBox();
+            this.andiGroupBox3 = new Andi.Controls.AndiGroupBox();
+            this.item_17 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_18 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_20 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_19 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_31 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_21 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_32 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_22 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_30 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_24 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_29 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_23 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_27 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_25 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_28 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_26 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.andiGroupBox2 = new Andi.Controls.AndiGroupBox();
+            this.item_1 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_2 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_4 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_3 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_15 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_5 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_16 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_6 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_14 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_8 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_13 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_7 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_11 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_9 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_12 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.item_10 = new Andi.Controls.ImageBox.AndiImageBox();
+            this.andiImageBox2 = new Andi.Controls.ImageBox.AndiImageBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cb_items = new AndiImageComboBox();
+            this.cb_items = new Andi.Controls.AndiImageComboBox();
             this.tb_hex = new System.Windows.Forms.TabPage();
-            this.hx_hiddengrotto = new HexBox();
+            this.hx_hiddengrotto = new Andi.Libs.HexBox.HexBox();
             this.toolStrip1.SuspendLayout();
             this.mTab1.SuspendLayout();
             this.tb_pokemon.SuspendLayout();
@@ -133,7 +133,6 @@ namespace Andi.Toolkit.gen5
             // 
             // toolStrip1
             // 
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bt_Open,
             this.bt_Save,
@@ -150,8 +149,8 @@ namespace Andi.Toolkit.gen5
             this.bt_Open.Image = global::Andi.Toolkit.Properties.Resources.folder_open;
             this.bt_Open.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bt_Open.Name = "bt_Open";
-            this.bt_Open.Size = new System.Drawing.Size(53, 22);
-            this.bt_Open.Text = "Buka";
+            this.bt_Open.Size = new System.Drawing.Size(56, 22);
+            this.bt_Open.Text = "Open";
             // 
             // bt_Save
             // 
@@ -159,8 +158,8 @@ namespace Andi.Toolkit.gen5
             this.bt_Save.Image = global::Andi.Toolkit.Properties.Resources.disk;
             this.bt_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bt_Save.Name = "bt_Save";
-            this.bt_Save.Size = new System.Drawing.Size(123, 22);
-            this.bt_Save.Text = "Simpan Sebagai ...";
+            this.bt_Save.Size = new System.Drawing.Size(77, 22);
+            this.bt_Save.Text = "Save as ...";
             // 
             // sMenuDown1
             // 
@@ -182,15 +181,15 @@ namespace Andi.Toolkit.gen5
             this.st_Auto.Checked = true;
             this.st_Auto.CheckState = System.Windows.Forms.CheckState.Checked;
             this.st_Auto.Name = "st_Auto";
-            this.st_Auto.Size = new System.Drawing.Size(215, 22);
-            this.st_Auto.Text = "Simpan Otomatis (edit)";
+            this.st_Auto.Size = new System.Drawing.Size(207, 22);
+            this.st_Auto.Text = "Automatic Save (edit)";
             // 
             // st_hexview
             // 
             this.st_hexview.Checked = true;
             this.st_hexview.CheckState = System.Windows.Forms.CheckState.Checked;
             this.st_hexview.Name = "st_hexview";
-            this.st_hexview.Size = new System.Drawing.Size(215, 22);
+            this.st_hexview.Size = new System.Drawing.Size(207, 22);
             this.st_hexview.Text = "Hex Viewer";
             // 
             // et_formecb
@@ -198,18 +197,18 @@ namespace Andi.Toolkit.gen5
             this.et_formecb.Checked = true;
             this.et_formecb.CheckState = System.Windows.Forms.CheckState.Checked;
             this.et_formecb.Name = "et_formecb";
-            this.et_formecb.Size = new System.Drawing.Size(215, 22);
-            this.et_formecb.Text = "Aktifkan Perubahan Forme";
+            this.et_formecb.Size = new System.Drawing.Size(207, 22);
+            this.et_formecb.Text = "Alternative Form Editable";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(212, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
             // 
             // HGExit
             // 
             this.HGExit.Name = "HGExit";
-            this.HGExit.Size = new System.Drawing.Size(215, 22);
+            this.HGExit.Size = new System.Drawing.Size(207, 22);
             this.HGExit.Text = "Exit";
             // 
             // bt_SaveCurrent
@@ -219,8 +218,8 @@ namespace Andi.Toolkit.gen5
             this.bt_SaveCurrent.Image = ((System.Drawing.Image)(resources.GetObject("bt_SaveCurrent.Image")));
             this.bt_SaveCurrent.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bt_SaveCurrent.Name = "bt_SaveCurrent";
-            this.bt_SaveCurrent.Size = new System.Drawing.Size(119, 22);
-            this.bt_SaveCurrent.Text = "Simpan Data Saat Ini";
+            this.bt_SaveCurrent.Size = new System.Drawing.Size(73, 22);
+            this.bt_SaveCurrent.Text = "Save now ...";
             this.bt_SaveCurrent.Visible = false;
             // 
             // cb_locname
@@ -262,7 +261,7 @@ namespace Andi.Toolkit.gen5
             this.mTab1.Controls.Add(this.tb_pokemon);
             this.mTab1.Controls.Add(this.tb_items);
             this.mTab1.Controls.Add(this.tb_hex);
-            this.mTab1.DisplayStyle = TabStyle.VisualStudio;
+            this.mTab1.DisplayStyle = Andi.Controls.TabControl.TabStyle.VisualStudio;
             // 
             // 
             // 
@@ -444,7 +443,7 @@ namespace Andi.Toolkit.gen5
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 26);
             this.label6.TabIndex = 9;
-            this.label6.Text = "Prosentase \r\nBetina :";
+            this.label6.Text = "Female\r\nRate :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nm_lv_max
@@ -614,7 +613,7 @@ namespace Andi.Toolkit.gen5
             // txt_itemid
             // 
             this.txt_itemid.Enabled = false;
-            this.txt_itemid.Location = new System.Drawing.Point(58, 219);
+            this.txt_itemid.Location = new System.Drawing.Point(66, 219);
             this.txt_itemid.Name = "txt_itemid";
             this.txt_itemid.ReadOnly = true;
             this.txt_itemid.Size = new System.Drawing.Size(100, 20);
@@ -652,7 +651,7 @@ namespace Andi.Toolkit.gen5
             this.item_17.AutoScroll = false;
             this.item_17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_17.IndexParent = 0;
-            this.item_17.Location = new System.Drawing.Point(14, 19);
+            this.item_17.Location = new System.Drawing.Point(27, 19);
             this.item_17.Name = "item_17";
             this.item_17.Size = new System.Drawing.Size(32, 32);
             this.item_17.TabIndex = 28;
@@ -662,7 +661,7 @@ namespace Andi.Toolkit.gen5
             this.item_18.AutoScroll = false;
             this.item_18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_18.IndexParent = 0;
-            this.item_18.Location = new System.Drawing.Point(52, 19);
+            this.item_18.Location = new System.Drawing.Point(65, 19);
             this.item_18.Name = "item_18";
             this.item_18.Size = new System.Drawing.Size(32, 32);
             this.item_18.TabIndex = 29;
@@ -672,7 +671,7 @@ namespace Andi.Toolkit.gen5
             this.item_20.AutoScroll = false;
             this.item_20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_20.IndexParent = 0;
-            this.item_20.Location = new System.Drawing.Point(52, 57);
+            this.item_20.Location = new System.Drawing.Point(65, 57);
             this.item_20.Name = "item_20";
             this.item_20.Size = new System.Drawing.Size(32, 32);
             this.item_20.TabIndex = 30;
@@ -682,7 +681,7 @@ namespace Andi.Toolkit.gen5
             this.item_19.AutoScroll = false;
             this.item_19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_19.IndexParent = 0;
-            this.item_19.Location = new System.Drawing.Point(14, 57);
+            this.item_19.Location = new System.Drawing.Point(27, 57);
             this.item_19.Name = "item_19";
             this.item_19.Size = new System.Drawing.Size(32, 32);
             this.item_19.TabIndex = 31;
@@ -692,7 +691,7 @@ namespace Andi.Toolkit.gen5
             this.item_31.AutoScroll = false;
             this.item_31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_31.IndexParent = 0;
-            this.item_31.Location = new System.Drawing.Point(266, 57);
+            this.item_31.Location = new System.Drawing.Point(279, 57);
             this.item_31.Name = "item_31";
             this.item_31.Size = new System.Drawing.Size(32, 32);
             this.item_31.TabIndex = 43;
@@ -702,7 +701,7 @@ namespace Andi.Toolkit.gen5
             this.item_21.AutoScroll = false;
             this.item_21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_21.IndexParent = 0;
-            this.item_21.Location = new System.Drawing.Point(99, 19);
+            this.item_21.Location = new System.Drawing.Point(112, 19);
             this.item_21.Name = "item_21";
             this.item_21.Size = new System.Drawing.Size(32, 32);
             this.item_21.TabIndex = 32;
@@ -712,7 +711,7 @@ namespace Andi.Toolkit.gen5
             this.item_32.AutoScroll = false;
             this.item_32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_32.IndexParent = 0;
-            this.item_32.Location = new System.Drawing.Point(304, 57);
+            this.item_32.Location = new System.Drawing.Point(317, 57);
             this.item_32.Name = "item_32";
             this.item_32.Size = new System.Drawing.Size(32, 32);
             this.item_32.TabIndex = 42;
@@ -722,7 +721,7 @@ namespace Andi.Toolkit.gen5
             this.item_22.AutoScroll = false;
             this.item_22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_22.IndexParent = 0;
-            this.item_22.Location = new System.Drawing.Point(137, 19);
+            this.item_22.Location = new System.Drawing.Point(150, 19);
             this.item_22.Name = "item_22";
             this.item_22.Size = new System.Drawing.Size(32, 32);
             this.item_22.TabIndex = 33;
@@ -732,7 +731,7 @@ namespace Andi.Toolkit.gen5
             this.item_30.AutoScroll = false;
             this.item_30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_30.IndexParent = 0;
-            this.item_30.Location = new System.Drawing.Point(304, 19);
+            this.item_30.Location = new System.Drawing.Point(317, 19);
             this.item_30.Name = "item_30";
             this.item_30.Size = new System.Drawing.Size(32, 32);
             this.item_30.TabIndex = 41;
@@ -742,7 +741,7 @@ namespace Andi.Toolkit.gen5
             this.item_24.AutoScroll = false;
             this.item_24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_24.IndexParent = 0;
-            this.item_24.Location = new System.Drawing.Point(137, 57);
+            this.item_24.Location = new System.Drawing.Point(150, 57);
             this.item_24.Name = "item_24";
             this.item_24.Size = new System.Drawing.Size(32, 32);
             this.item_24.TabIndex = 34;
@@ -752,7 +751,7 @@ namespace Andi.Toolkit.gen5
             this.item_29.AutoScroll = false;
             this.item_29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_29.IndexParent = 0;
-            this.item_29.Location = new System.Drawing.Point(266, 19);
+            this.item_29.Location = new System.Drawing.Point(279, 19);
             this.item_29.Name = "item_29";
             this.item_29.Size = new System.Drawing.Size(32, 32);
             this.item_29.TabIndex = 40;
@@ -762,7 +761,7 @@ namespace Andi.Toolkit.gen5
             this.item_23.AutoScroll = false;
             this.item_23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_23.IndexParent = 0;
-            this.item_23.Location = new System.Drawing.Point(99, 57);
+            this.item_23.Location = new System.Drawing.Point(112, 57);
             this.item_23.Name = "item_23";
             this.item_23.Size = new System.Drawing.Size(32, 32);
             this.item_23.TabIndex = 35;
@@ -772,7 +771,7 @@ namespace Andi.Toolkit.gen5
             this.item_27.AutoScroll = false;
             this.item_27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_27.IndexParent = 0;
-            this.item_27.Location = new System.Drawing.Point(183, 57);
+            this.item_27.Location = new System.Drawing.Point(196, 57);
             this.item_27.Name = "item_27";
             this.item_27.Size = new System.Drawing.Size(32, 32);
             this.item_27.TabIndex = 39;
@@ -782,7 +781,7 @@ namespace Andi.Toolkit.gen5
             this.item_25.AutoScroll = false;
             this.item_25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_25.IndexParent = 0;
-            this.item_25.Location = new System.Drawing.Point(183, 19);
+            this.item_25.Location = new System.Drawing.Point(196, 19);
             this.item_25.Name = "item_25";
             this.item_25.Size = new System.Drawing.Size(32, 32);
             this.item_25.TabIndex = 36;
@@ -792,7 +791,7 @@ namespace Andi.Toolkit.gen5
             this.item_28.AutoScroll = false;
             this.item_28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_28.IndexParent = 0;
-            this.item_28.Location = new System.Drawing.Point(221, 57);
+            this.item_28.Location = new System.Drawing.Point(234, 57);
             this.item_28.Name = "item_28";
             this.item_28.Size = new System.Drawing.Size(32, 32);
             this.item_28.TabIndex = 38;
@@ -802,7 +801,7 @@ namespace Andi.Toolkit.gen5
             this.item_26.AutoScroll = false;
             this.item_26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_26.IndexParent = 0;
-            this.item_26.Location = new System.Drawing.Point(221, 19);
+            this.item_26.Location = new System.Drawing.Point(234, 19);
             this.item_26.Name = "item_26";
             this.item_26.Size = new System.Drawing.Size(32, 32);
             this.item_26.TabIndex = 37;
@@ -839,7 +838,7 @@ namespace Andi.Toolkit.gen5
             this.item_1.AutoScroll = false;
             this.item_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_1.IndexParent = 0;
-            this.item_1.Location = new System.Drawing.Point(14, 19);
+            this.item_1.Location = new System.Drawing.Point(26, 19);
             this.item_1.Name = "item_1";
             this.item_1.Size = new System.Drawing.Size(32, 32);
             this.item_1.TabIndex = 28;
@@ -849,7 +848,7 @@ namespace Andi.Toolkit.gen5
             this.item_2.AutoScroll = false;
             this.item_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_2.IndexParent = 0;
-            this.item_2.Location = new System.Drawing.Point(52, 19);
+            this.item_2.Location = new System.Drawing.Point(64, 19);
             this.item_2.Name = "item_2";
             this.item_2.Size = new System.Drawing.Size(32, 32);
             this.item_2.TabIndex = 29;
@@ -859,7 +858,7 @@ namespace Andi.Toolkit.gen5
             this.item_4.AutoScroll = false;
             this.item_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_4.IndexParent = 0;
-            this.item_4.Location = new System.Drawing.Point(52, 57);
+            this.item_4.Location = new System.Drawing.Point(64, 57);
             this.item_4.Name = "item_4";
             this.item_4.Size = new System.Drawing.Size(32, 32);
             this.item_4.TabIndex = 30;
@@ -869,7 +868,7 @@ namespace Andi.Toolkit.gen5
             this.item_3.AutoScroll = false;
             this.item_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_3.IndexParent = 0;
-            this.item_3.Location = new System.Drawing.Point(14, 57);
+            this.item_3.Location = new System.Drawing.Point(26, 57);
             this.item_3.Name = "item_3";
             this.item_3.Size = new System.Drawing.Size(32, 32);
             this.item_3.TabIndex = 31;
@@ -879,7 +878,7 @@ namespace Andi.Toolkit.gen5
             this.item_15.AutoScroll = false;
             this.item_15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_15.IndexParent = 0;
-            this.item_15.Location = new System.Drawing.Point(266, 57);
+            this.item_15.Location = new System.Drawing.Point(278, 57);
             this.item_15.Name = "item_15";
             this.item_15.Size = new System.Drawing.Size(32, 32);
             this.item_15.TabIndex = 43;
@@ -889,7 +888,7 @@ namespace Andi.Toolkit.gen5
             this.item_5.AutoScroll = false;
             this.item_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_5.IndexParent = 0;
-            this.item_5.Location = new System.Drawing.Point(99, 19);
+            this.item_5.Location = new System.Drawing.Point(111, 19);
             this.item_5.Name = "item_5";
             this.item_5.Size = new System.Drawing.Size(32, 32);
             this.item_5.TabIndex = 32;
@@ -899,7 +898,7 @@ namespace Andi.Toolkit.gen5
             this.item_16.AutoScroll = false;
             this.item_16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_16.IndexParent = 0;
-            this.item_16.Location = new System.Drawing.Point(304, 57);
+            this.item_16.Location = new System.Drawing.Point(316, 57);
             this.item_16.Name = "item_16";
             this.item_16.Size = new System.Drawing.Size(32, 32);
             this.item_16.TabIndex = 42;
@@ -909,7 +908,7 @@ namespace Andi.Toolkit.gen5
             this.item_6.AutoScroll = false;
             this.item_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_6.IndexParent = 0;
-            this.item_6.Location = new System.Drawing.Point(137, 19);
+            this.item_6.Location = new System.Drawing.Point(149, 19);
             this.item_6.Name = "item_6";
             this.item_6.Size = new System.Drawing.Size(32, 32);
             this.item_6.TabIndex = 33;
@@ -919,7 +918,7 @@ namespace Andi.Toolkit.gen5
             this.item_14.AutoScroll = false;
             this.item_14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_14.IndexParent = 0;
-            this.item_14.Location = new System.Drawing.Point(304, 19);
+            this.item_14.Location = new System.Drawing.Point(316, 19);
             this.item_14.Name = "item_14";
             this.item_14.Size = new System.Drawing.Size(32, 32);
             this.item_14.TabIndex = 41;
@@ -929,7 +928,7 @@ namespace Andi.Toolkit.gen5
             this.item_8.AutoScroll = false;
             this.item_8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_8.IndexParent = 0;
-            this.item_8.Location = new System.Drawing.Point(137, 57);
+            this.item_8.Location = new System.Drawing.Point(149, 57);
             this.item_8.Name = "item_8";
             this.item_8.Size = new System.Drawing.Size(32, 32);
             this.item_8.TabIndex = 34;
@@ -939,7 +938,7 @@ namespace Andi.Toolkit.gen5
             this.item_13.AutoScroll = false;
             this.item_13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_13.IndexParent = 0;
-            this.item_13.Location = new System.Drawing.Point(266, 19);
+            this.item_13.Location = new System.Drawing.Point(278, 19);
             this.item_13.Name = "item_13";
             this.item_13.Size = new System.Drawing.Size(32, 32);
             this.item_13.TabIndex = 40;
@@ -949,7 +948,7 @@ namespace Andi.Toolkit.gen5
             this.item_7.AutoScroll = false;
             this.item_7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_7.IndexParent = 0;
-            this.item_7.Location = new System.Drawing.Point(99, 57);
+            this.item_7.Location = new System.Drawing.Point(111, 57);
             this.item_7.Name = "item_7";
             this.item_7.Size = new System.Drawing.Size(32, 32);
             this.item_7.TabIndex = 35;
@@ -959,7 +958,7 @@ namespace Andi.Toolkit.gen5
             this.item_11.AutoScroll = false;
             this.item_11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_11.IndexParent = 0;
-            this.item_11.Location = new System.Drawing.Point(183, 57);
+            this.item_11.Location = new System.Drawing.Point(195, 57);
             this.item_11.Name = "item_11";
             this.item_11.Size = new System.Drawing.Size(32, 32);
             this.item_11.TabIndex = 39;
@@ -969,7 +968,7 @@ namespace Andi.Toolkit.gen5
             this.item_9.AutoScroll = false;
             this.item_9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_9.IndexParent = 0;
-            this.item_9.Location = new System.Drawing.Point(183, 19);
+            this.item_9.Location = new System.Drawing.Point(195, 19);
             this.item_9.Name = "item_9";
             this.item_9.Size = new System.Drawing.Size(32, 32);
             this.item_9.TabIndex = 36;
@@ -979,7 +978,7 @@ namespace Andi.Toolkit.gen5
             this.item_12.AutoScroll = false;
             this.item_12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_12.IndexParent = 0;
-            this.item_12.Location = new System.Drawing.Point(221, 57);
+            this.item_12.Location = new System.Drawing.Point(233, 57);
             this.item_12.Name = "item_12";
             this.item_12.Size = new System.Drawing.Size(32, 32);
             this.item_12.TabIndex = 38;
@@ -989,7 +988,7 @@ namespace Andi.Toolkit.gen5
             this.item_10.AutoScroll = false;
             this.item_10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.item_10.IndexParent = 0;
-            this.item_10.Location = new System.Drawing.Point(221, 19);
+            this.item_10.Location = new System.Drawing.Point(233, 19);
             this.item_10.Name = "item_10";
             this.item_10.Size = new System.Drawing.Size(32, 32);
             this.item_10.TabIndex = 37;
@@ -999,7 +998,7 @@ namespace Andi.Toolkit.gen5
             this.andiImageBox2.AutoScroll = false;
             this.andiImageBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.andiImageBox2.IndexParent = 0;
-            this.andiImageBox2.Location = new System.Drawing.Point(185, 245);
+            this.andiImageBox2.Location = new System.Drawing.Point(193, 245);
             this.andiImageBox2.Name = "andiImageBox2";
             this.andiImageBox2.Size = new System.Drawing.Size(32, 32);
             this.andiImageBox2.TabIndex = 46;
@@ -1007,7 +1006,7 @@ namespace Andi.Toolkit.gen5
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 248);
+            this.label8.Location = new System.Drawing.Point(17, 248);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(33, 13);
             this.label8.TabIndex = 45;
@@ -1019,7 +1018,7 @@ namespace Andi.Toolkit.gen5
             this.cb_items.FormattingEnabled = true;
             this.cb_items.IntegralHeight = false;
             this.cb_items.ItemHeight = 17;
-            this.cb_items.Location = new System.Drawing.Point(58, 245);
+            this.cb_items.Location = new System.Drawing.Point(66, 245);
             this.cb_items.Name = "cb_items";
             this.cb_items.Size = new System.Drawing.Size(121, 23);
             this.cb_items.TabIndex = 44;
@@ -1041,7 +1040,7 @@ namespace Andi.Toolkit.gen5
             this.hx_hiddengrotto.ColumnInfoVisible = true;
             this.hx_hiddengrotto.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hx_hiddengrotto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.hx_hiddengrotto.HexCasing = HexCasing.Lower;
+            this.hx_hiddengrotto.HexCasing = Andi.Libs.HexBox.HexCasing.Lower;
             this.hx_hiddengrotto.LineInfoVisible = true;
             this.hx_hiddengrotto.Location = new System.Drawing.Point(3, 3);
             this.hx_hiddengrotto.Name = "hx_hiddengrotto";

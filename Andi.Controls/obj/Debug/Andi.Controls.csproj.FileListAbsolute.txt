@@ -1,0 +1,15 @@
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\bin\Debug\Andi.Controls.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\bin\Debug\Andi.Controls.pdb
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\obj\Debug\Andi.Controls.csprojResolveAssemblyReference.cache
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\obj\Debug\Andi.Controls.AndiColorComboBox.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\obj\Debug\NinfiaDSToolkit.Andi.Controls.ListBoxTabs.resources
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\obj\Debug\Andi.Controls.csproj.GenerateResource.Cache
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\obj\Debug\Andi.Controls.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Controls\obj\Debug\Andi.Controls.pdb
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Controls\bin\Debug\Andi.Controls.dll
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Controls\bin\Debug\Andi.Controls.pdb
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Controls\obj\Debug\Andi.Controls.AndiColorComboBox.resources
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Controls\obj\Debug\Andi.Controls.ListBoxTabs.resources
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Controls\obj\Debug\Andi.Controls.csproj.GenerateResource.Cache
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Controls\obj\Debug\Andi.Controls.dll
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Controls\obj\Debug\Andi.Controls.pdb

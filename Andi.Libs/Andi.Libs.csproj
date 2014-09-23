@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{402AC5EB-0C87-4D02-870B-78C1C66BA883}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Andi.Libs</RootNamespace>
+    <AssemblyName>Andi.Libs</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FastColoredTextBox\AutocompleteItem.cs" />
+    <Compile Include="FastColoredTextBox\AutocompleteMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\Bookmarks.cs" />
+    <Compile Include="FastColoredTextBox\Char.cs" />
+    <Compile Include="FastColoredTextBox\CommandManager.cs" />
+    <Compile Include="FastColoredTextBox\Commands.cs" />
+    <Compile Include="FastColoredTextBox\DocumentMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\EncodingDetector.cs" />
+    <Compile Include="FastColoredTextBox\ExportToHTML.cs" />
+    <Compile Include="FastColoredTextBox\ExportToRTF.cs" />
+    <Compile Include="FastColoredTextBox\FastColoredTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\FileTextSource.cs" />
+    <Compile Include="FastColoredTextBox\FindForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\FindForm.Designer.cs">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastColoredTextBox\GoToForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\GoToForm.Designer.cs">
+      <DependentUpon>GoToForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastColoredTextBox\Hints.cs" />
+    <Compile Include="FastColoredTextBox\Hotkeys.cs" />
+    <Compile Include="FastColoredTextBox\HotkeysEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\HotkeysEditorForm.Designer.cs">
+      <DependentUpon>HotkeysEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastColoredTextBox\LimitedStack.cs" />
+    <Compile Include="FastColoredTextBox\Line.cs" />
+    <Compile Include="FastColoredTextBox\LinesAccessor.cs" />
+    <Compile Include="FastColoredTextBox\MacrosManager.cs" />
+    <Compile Include="FastColoredTextBox\Place.cs" />
+    <Compile Include="FastColoredTextBox\PlatformType.cs" />
+    <Compile Include="FastColoredTextBox\Range.cs" />
+    <Compile Include="FastColoredTextBox\ReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\ReplaceForm.Designer.cs">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastColoredTextBox\Ruler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\Ruler.Designer.cs">
+      <DependentUpon>Ruler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FastColoredTextBox\Style.cs" />
+    <Compile Include="FastColoredTextBox\SyntaxDescriptor.cs" />
+    <Compile Include="FastColoredTextBox\SyntaxHighlighter.cs" />
+    <Compile Include="FastColoredTextBox\TextSource.cs" />
+    <Compile Include="FastColoredTextBox\TypeDescriptor.cs" />
+    <Compile Include="FastColoredTextBox\UnfocusablePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FastColoredTextBox\VisualMarker.cs" />
+    <Compile Include="HexBox\BuiltInContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HexBox\ByteCharConverters.cs" />
+    <Compile Include="HexBox\ByteCollection.cs" />
+    <Compile Include="HexBox\BytePositionInfo.cs" />
+    <Compile Include="HexBox\DataBlock.cs" />
+    <Compile Include="HexBox\DataMap.cs" />
+    <Compile Include="HexBox\DynamicByteProvider.cs" />
+    <Compile Include="HexBox\DynamicFileByteProvider.cs" />
+    <Compile Include="HexBox\FileByteProvider.cs" />
+    <Compile Include="HexBox\FileDataBlock.cs" />
+    <Compile Include="HexBox\FindOptions.cs" />
+    <Compile Include="HexBox\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HexBox\HexCasing.cs" />
+    <Compile Include="HexBox\IByteProvider.cs" />
+    <Compile Include="HexBox\MemoryDataBlock.cs" />
+    <Compile Include="HexBox\NativeMethods.cs" />
+    <Compile Include="HexBox\Util.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksums\Adler32.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksums\CRC32.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksums\IChecksum.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Checksums\StrangeCRC.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Encryption\ZipAESStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Encryption\ZipAESTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="ICSharpCode.SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="IniParser\Exceptions\ParsingException.cs" />
+    <Compile Include="IniParser\FileIniParser.cs" />
+    <Compile Include="IniParser\Helpers\Assert.cs" />
+    <Compile Include="IniParser\Model\Configuration\BaseIniParserConfiguration.cs" />
+    <Compile Include="IniParser\Model\Configuration\DefaultIniParserConfiguration.cs" />
+    <Compile Include="IniParser\Model\Configuration\IIniParserConfiguration.cs" />
+    <Compile Include="IniParser\Model\Formatting\DefaultIniDataFormatter.cs" />
+    <Compile Include="IniParser\Model\Formatting\IIniDataFormatter.cs" />
+    <Compile Include="IniParser\Model\IniData.cs" />
+    <Compile Include="IniParser\Model\KeyData.cs" />
+    <Compile Include="IniParser\Model\KeyDataCollection.cs" />
+    <Compile Include="IniParser\Model\SectionData.cs" />
+    <Compile Include="IniParser\Model\SectionDataCollection.cs" />
+    <Compile Include="IniParser\Parser\IniDataParser.cs" />
+    <Compile Include="IniParser\StreamIniDataParser.cs" />
+    <Compile Include="IniParser\StringIniParser.cs" />
+    <Compile Include="MemoryMan.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FastColoredTextBox\FastColoredTextBox.resx">
+      <DependentUpon>FastColoredTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastColoredTextBox\FindForm.resx">
+      <DependentUpon>FindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastColoredTextBox\GoToForm.resx">
+      <DependentUpon>GoToForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastColoredTextBox\HotkeysEditorForm.resx">
+      <DependentUpon>HotkeysEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FastColoredTextBox\ReplaceForm.resx">
+      <DependentUpon>ReplaceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HexBox\HexBox.resx">
+      <DependentUpon>HexBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HexBox\HexBox.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HexBox\HexBox.snk" />
+    <None Include="IniParser\Model\IniData.cs.rej" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

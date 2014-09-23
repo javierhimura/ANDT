@@ -1,0 +1,15 @@
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\bin\Debug\Andi.Utils.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\bin\Debug\Andi.Utils.pdb
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\bin\Debug\Andi.Libs.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\bin\Debug\System.Data.SQLite.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\bin\Debug\Andi.Libs.pdb
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\obj\Debug\Andi.Utils.csprojResolveAssemblyReference.cache
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\obj\Debug\Andi.Utils.dll
+E:\dokumen\_Percobaan\ANDT\Andi.Utils\obj\Debug\Andi.Utils.pdb
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Utils\bin\Debug\Andi.Utils.dll
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Utils\bin\Debug\Andi.Utils.pdb
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Utils\bin\Debug\Andi.Libs.dll
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Utils\bin\Debug\Andi.Libs.pdb
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Utils\obj\Debug\Andi.Utils.csprojResolveAssemblyReference.cache
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Utils\obj\Debug\Andi.Utils.dll
+E:\dokumen\_\_Percobaan\NinfiaDSToolkit\Andi.Utils\obj\Debug\Andi.Utils.pdb

@@ -2,11 +2,16 @@
 using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using Andi.Controls.TabControl;
 using Andi.Toolkit.gen0;
 using Andi.Toolkit.gen4;
 using Andi.Toolkit.gen5;
 using Andi.Toolkit.utils;
+using Andi.Toolkit.utils2;
+using Andi.Toolkit.utils2.Arc;
+using Andi.Toolkit.utils2.Main;
 using Andi.Toolkit._un;
+using Andi.Utils.Renderer;
 using WeifenLuo.WinFormsUI.Docking;
 
 namespace Andi.Toolkit
@@ -48,7 +53,7 @@ namespace Andi.Toolkit
             mEvolution.Click += ShowMEvolutionEditorClick;
             // mInGameTrade.Click += ShowIngameTrade_Click;
 
-            // mTestNarc.Click += ToolTestMTestNarcClick;
+            mTestNarc.Click += ToolTestMTestNarcClick;
             // mTestBLZ.Click += ToolTestBLZ_Click;
             // mTestOva9.Click += ToolTestOvaTable_Click;
         }
@@ -182,7 +187,7 @@ namespace Andi.Toolkit
 
         private void ToolTestMTestNarcClick(object sender, EventArgs e)
         {
-            loadDockForms(new NarcExplorer(), "GARC Viewer");
+            loadDockForms(new NarcExplorer(), "NARC Viewer Test");
         }
 
         private void ToolTestOvaTable_Click(object sender, EventArgs e)
@@ -210,5 +215,20 @@ namespace Andi.Toolkit
             Process.Start("https://github.com/andibadra");
         }
         #endregion
+
+        private void win8ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Theme.setTheme(1);
+        }
+
+        private void vS2012WhiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Theme.setTheme(0);
+        }
+
+        private void bCSARUnpackerTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadDockForms(new Andi.Toolkit.utils2.BCSARUnpacker(), "BCSAR Unpacker");
+        }
     }
 }

@@ -46,18 +46,18 @@ namespace Andi.Toolkit.gen0
             this.label2 = new System.Windows.Forms.ToolStripLabel();
             this.label1 = new System.Windows.Forms.ToolStripLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.IB_pokemon = new AndiImageBox();
-            this.LB_List = new AndiListBox();
-            this.mTab1 = new AndiCustomTabControl();
+            this.IB_pokemon = new Andi.Controls.ImageBox.AndiImageBox();
+            this.LB_List = new Andi.Controls.AndiListBox();
+            this.mTab1 = new Andi.Controls.TabControl.AndiCustomTabControl();
             this.tab_list = new System.Windows.Forms.TabPage();
             this.bt_remove = new System.Windows.Forms.Button();
             this.bt_add = new System.Windows.Forms.Button();
             this.nm_lv = new System.Windows.Forms.NumericUpDown();
-            this.cb_pokemon = new AndiImageComboBox();
+            this.cb_pokemon = new Andi.Controls.AndiImageComboBox();
             this.grid1 = new SourceGrid.Grid();
             this.tab_hex = new System.Windows.Forms.TabPage();
-            this.hexBox1 = new HexBox();
+            this.hexBox1 = new Andi.Libs.HexBox.HexBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -71,7 +71,6 @@ namespace Andi.Toolkit.gen0
             // 
             // toolStrip1
             // 
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bt_Open,
             this.bt_Save,
@@ -94,16 +93,16 @@ namespace Andi.Toolkit.gen0
             this.bt_Open.Image = global::Andi.Toolkit.Properties.Resources.folder_open;
             this.bt_Open.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bt_Open.Name = "bt_Open";
-            this.bt_Open.Size = new System.Drawing.Size(53, 22);
-            this.bt_Open.Text = "Buka";
+            this.bt_Open.Size = new System.Drawing.Size(68, 22);
+            this.bt_Open.Text = "Open ...";
             // 
             // bt_Save
             // 
             this.bt_Save.Image = global::Andi.Toolkit.Properties.Resources.disk;
             this.bt_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bt_Save.Name = "bt_Save";
-            this.bt_Save.Size = new System.Drawing.Size(123, 22);
-            this.bt_Save.Text = "Simpan Sebagai ...";
+            this.bt_Save.Size = new System.Drawing.Size(77, 22);
+            this.bt_Save.Text = "Save as ...";
             // 
             // toolStripSeparator3
             // 
@@ -213,7 +212,7 @@ namespace Andi.Toolkit.gen0
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mTab1.Controls.Add(this.tab_list);
             this.mTab1.Controls.Add(this.tab_hex);
-            this.mTab1.DisplayStyle = TabStyle.VisualStudio;
+            this.mTab1.DisplayStyle = Andi.Controls.TabControl.TabStyle.VisualStudio;
             // 
             // 
             // 
@@ -322,13 +321,13 @@ namespace Andi.Toolkit.gen0
             this.hexBox1.ColumnInfoVisible = true;
             this.hexBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hexBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.hexBox1.HexCasing = HexCasing.Lower;
+            this.hexBox1.HexCasing = Andi.Libs.HexBox.HexCasing.Lower;
             this.hexBox1.LineInfoVisible = true;
             this.hexBox1.Location = new System.Drawing.Point(3, 3);
             this.hexBox1.Name = "hexBox1";
             this.hexBox1.ReadOnly = true;
             this.hexBox1.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBox1.Size = new System.Drawing.Size(466, 412);
+            this.hexBox1.Size = new System.Drawing.Size(466, 415);
             this.hexBox1.StringViewVisible = true;
             this.hexBox1.TabIndex = 1;
             this.hexBox1.UseFixedBytesPerLine = true;
