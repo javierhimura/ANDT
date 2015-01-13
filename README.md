@@ -1,4 +1,14 @@
-## Welcome to Andi Ninfia DS Toolkit ##
+this project already deprecated and replaced with new rewrite project (is more flexible than before and added something interesting feature), and is still all in one tools (gen 4, gen 5, gen 6, and other* on one tool).
+
+text extractor (on projectpokemon) is just filler before i release my newer tool, well is just reused old code with little modification from newer codebase (i just lazy to copy them since is too much to change code).
+
+is fun to discovery new thing on nintendo 3ds game like fantasy life, final fantasy explorer, harvest moon (new beginning and SOS, TLV is suck so no), pokemon (XYORAS), mysterydungeon (bit interesting on this, btw thanks to psy_commando , evandixon and other for make a great documentation).
+
+on newer tool will used json or bson or cbor (depend on my next research about performance), my own pokedex database (based on veekun, thank you =), and several other source and my own rip data), and other as main database engine, replaced invoke sqlite dll.
+
+btw you will like it =) thank you for wait XD
+
+## OLD Readme.md ##
 
 **ANDT** is a simple utilities to help you edit pokemon data. This tool used .Net framework 4 and C# 5. Current is not supported open ROM directly, plug-in system, and other feature, it will implemented on future =) 
 
